@@ -1,0 +1,2632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/topNav.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/modals.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <style>
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                darkMode: 'class',
+                fontFamily: {
+                    sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        primary: '#FC821F',
+                        secondary: '#1D8A8B',
+                        grayLight: '#EFF2F6'
+                    },
+                    padding: {
+                        '7.5rem': '7.5rem',
+                        // => for xl up
+                    },
+                    width: {
+                        '48%': '48%',
+                        '52%': '52%',
+                        '1.8rem': '1.8rem',
+                    }
+                },
+                screens: {
+                    xs: { min: "0px" },
+                    // => @media (min-width: 0px) { ... }
+
+                    sm: { min: "360px" },
+                    // => @media (min-width: 360px) { ... }
+
+                    md: { min: "768px" },
+                    // => @media (min-width: 768px) { ... }
+
+                    lg: { min: "1024px" },
+                    // => @media (min-width: 1024px) { ... }
+
+                    xl: { min: "1440px" },
+                    // => @media (min-width: 1440px) { ... }
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white xl:px-[7.5rem] lg:px-10 md:px-9 sm:px-5 sx:px-6 flex flex-wrap items-center justify-between mx-auto md:h-[80px] fixed top-0 left-0 w-full z-10"
+        style="border-bottom: 1px solid #f0f2f6">
+        <a href="./index.html" class="flex items-center hidden lg:block">
+            <img src="./images/Landing/footerLogo.svg" width="158px" alt="Logo" />
+        </a>
+        <a href="./index.html" class="flex items-center hidden md:block lg:hidden self-center">
+            <img src="./images/logo_sm.svg" width="36px" alt="Logo" />
+        </a>
+        <div class="pl-4 flex md:order-2">
+            <ul
+                class="hidden md:flex flex-col items-center bg-gray-50 md:flex-row lg:space-x-6 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                <li>
+                    <a href='javascript:;' onclick="openModal('loginModal')"
+                        class="block font-semibold text-base bg-blue-700 hover:text-[#1D8A8B] border-b-4 border-white hover:border-[#1D8A8B] md:bg-white md:py-6"
+                        aria-current="page">Log In</a>
+                </li>
+                <li>
+                    <button onclick="openModal('createAccountModal')" type="button"
+                        class="text-white ml-6 bg-[#FC821F] hover:bg-[#FF953F] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[4px] text-sm px-6 py-3 text-center mr-3 md:mr-0 get-started-btn">
+                        Get Started
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div
+            class="py-4 flex flex-wrap flex-row-reverse md:hidden items-center justify-between w-full mx-auto border-b py-4 h-[80px]">
+            <a href="./index.html" class="flex items-center">
+                <img src="./images/logo_sm.svg" class="lg:hidden h-6 sm:h-9" alt="Logo" />
+            </a>
+
+            <button data-collapse-toggle="navbar-sticky" type="button" id="menu-button"
+                class="inline-flex items-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-sticky" aria-expanded="false">
+                <div class="nav-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </button>
+        </div>
+        <div class="hidden lg:ml-6 xl:ml-0 items-center h-screen md:h-auto overflow-y-auto justify-between w-full md:flex md:w-auto md:order-1"
+            id="menu">
+            <ul
+                class="flex flex-col md:justify-around w-full mt-[24px] md:flex-row md:space-x-12 xl:space-x-20 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                <li>
+                    <a href="./resource-center.html"
+                        class="block font-semibold py-2 text-[20px] md:text-base md:hover:text-[#1D8A8B] md:border-b-4 border-white md:hover:border-[#1D8A8B] md:py-6"
+                        aria-current="page">
+                        Resource Center
+                    </a>
+                </li>
+                <li>
+                    <a href="./employers.html"
+                        class="block font-semibold py-2 text-[20px] md:text-base md:hover:text-[#1D8A8B] md:border-b-4 border-white md:hover:border-[#1D8A8B] md:py-6">
+                        Employers
+                    </a>
+                </li>
+                <li>
+                    <a href="./about-us.html"
+                        class="block font-semibold py-2 text-[20px] md:text-base md:hover:text-[#1D8A8B] md:border-b-4 border-white md:hover:border-[#1D8A8B] md:py-6">
+                        About Us
+                    </a>
+                </li>
+            </ul>
+            <hr class="h-px mt-[20px] md:hidden bg-gray-200 border-0" />
+            <ul
+                class="flex flex-col mt-[10px] mb-[40px] md:hidden md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                <li>
+                    <a href="https://afitd-test.web.app/home/FAQ/message"
+                        class="block font-normal text-[16px] mt-[16px]" aria-current="page">The Message</a>
+                </li>
+                <li>
+                    <a href="https://afitd-test.web.app/home/FAQ/terms"
+                        class="block font-normal text-[16px] mt-[16px]">Terms of Use</a>
+                </li>
+                <li>
+                    <a href="https://afitd-test.web.app/home/FAQ/privacy"
+                        class="block font-normal text-[16px] mt-[16px]">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="https://afitd-test.web.app/home/Contact-Us"
+                        class="block font-normal text-[16px] mt-[16px]">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="mt-[60px] md:hidden flex items-center flex-row text-sm font-medium border-0 bg-white">
+                <li>
+                    <button type="button" onclick="openModal('loginModal')"
+                        class="text-base bg-gray-100 hover:bg-[#EBE9E9] sm:mr-[20px] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[4px] text-[15px] px-[52px] py-4 text-center sm:mr-3 md:mr-0 ]">
+                        Log In
+                    </button>
+                </li>
+                <li>
+                    <button type="button" onclick="openModal('createAccountModal')"
+                        class="text-white bg-[#FC821F] hover:bg-[#FF953F] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[4px] text-[15px] px-[52px] py-4 text-center md:mr-0 ]">
+                        Get Started
+                    </button>
+                </li>
+            </ul>
+
+            <div class="flex mt-6 justify-left md:hidden">
+                <a href="https://www.instagram.com/afootinthedoor_work/" class="">
+                    <svg class="w-8 h-8 mr-[20px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only">Instagram page</span>
+                </a>
+
+                <a href="https://www.facebook.com/afootinthedoorwork" class="">
+                    <svg class="w-8 h-8 mr-[20px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z">
+                        </path>
+                    </svg>
+                    <span class="sr-only">Facebook page</span>
+                </a>
+
+                <a href="https://www.linkedin.com/company/a-foot-in-the-door-inc/" class="">
+                    <svg class="w-8 h-8 mr-[20px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
+                        </path>
+                    </svg>
+                    <span class="sr-only">linkedin page</span>
+                </a>
+                <a href="https://www.youtube.com/channel/UCT6Z3_e5AgfVvcI0_8tlIdQ" class="">
+                    <svg class="w-8 h-8 mr-[20px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z">
+                        </path>
+                    </svg>
+                    <span class="sr-only">Youtube account</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end  -->
+
+    <!-- modal section start-->
+    <!--  login modal start -->
+    <div id="loginModal" class="login-modal">
+        <!-- Modal content -->
+        <div class="login-modal-content">
+            <div class="login-modal-container">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="login-modal-close" onclick="closeModal('loginModal')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </span>
+                </div>
+                <h6 class="login-modal-title">Account Log in</h6>
+            </div>
+
+            <div class="login-modal-form-container">
+                <!-- login with buttons -->
+                <!-- apple login -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5 
+                    border border-transparent text-base font-medium text-white bg-black rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px]">
+                    <img src="./images/Modal/apple.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px] -ml-[17px]">Continue with
+                            Apple</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <!-- google button -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5
+                    border border-transparent text-base font-medium text-white rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px] bg-[#EBE9E9] mt-2 mb-6">
+                    <img class="w-[24px]" src="./images/Modal/google.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px]" style="color:rgba(0, 0, 0, 0.54);">Continue with
+                            Google</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <div class="flex justify-between items-center mb-[30px]">
+                    <hr class="w-[107px] h-[2px]">
+                    <p class="" style="color: #9B9E9C;">or log in with email</p>
+                    <hr class="w-[107px] h-[2px]">
+                </div>
+
+                <form action="">
+                    <div class="mb-6">
+                        <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Email
+                            Address</label>
+                        <input type="text" id="email-address"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                            placeholder="+ Ex. john@smith.com">
+                    </div>
+
+                    <div class="mb-6 mb-[30px]">
+                        <label for="password" class="block mb-2 text-sm font-bold text-gray-900 ">Password</label>
+                        <input type="text" id="password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="Password">
+                        <a href="" class="text-sm text-secondary hover:underline mt-2">Forgot Password?</a>
+                    </div>
+                    <div class="g-recaptcha mt-[24px] mb-[35px]" data-sitekey="YOUR_SITE_KEY"></div>
+                    <div>
+                        <button class="bg-secondary text-white  py-5 px-4 rounded-[4px] w-full login-button-modal">Log
+                            In</button>
+                    </div>
+                    <div class="text-center">
+                        <p class="login-modal-bottom-text">Don’t have an account? <a href="javascript:;"
+                                class="text-secondary underline"
+                                onclick="toggleCreateAndLoginModal('loginModal', 'createAccountModal');">Create
+                                account</a>
+                        </p>
+
+                        <p class="login-modal-bottom-text pb-10">
+                            By logging in, you agree to our <a href="https://afitd-test.web.app/home/FAQ/terms"
+                                target="_blank" class="text-secondary underline">Terms and
+                                Conditions</a> and
+                            <br>
+                            <a href="https://afitd-test.web.app/home/FAQ/privacy" target="_blank"
+                                class="text-secondary underline">Privacy Policy</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--  login modal end -->
+
+
+    <!-- Employers login modal start  -->
+    <div id="loginModalEmployers" class="login-modal">
+        <!-- Modal content -->
+        <div class="login-modal-content">
+            <div class="login-modal-container">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="login-modal-close" onclick="closeModal('loginModalEmployers')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </span>
+                </div>
+                <h6 class="login-modal-title">Account Log in</h6>
+            </div>
+
+            <div class="login-modal-form-container">
+                <!-- login with buttons -->
+                <!-- apple login -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5 
+                    border border-transparent text-base font-medium text-white bg-black rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px]">
+                    <img src="./images/Modal/apple.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px] -ml-[17px]">Continue with
+                            Apple</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <!-- google button -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5
+                    border border-transparent text-base font-medium text-white rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px] bg-[#EBE9E9] mt-2 mb-6">
+                    <img class="w-[24px]" src="./images/Modal/google.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px]" style="color:rgba(0, 0, 0, 0.54);">Continue with
+                            Google</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <div class="flex justify-between items-center mb-[30px]">
+                    <hr class="w-[107px] h-[2px]">
+                    <p class="" style="color: #9B9E9C;">or log in with email</p>
+                    <hr class="w-[107px] h-[2px]">
+                </div>
+
+                <form action="">
+                    <div class="mb-6">
+                        <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Email
+                            Address</label>
+                        <input type="text" id="email-address"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                            placeholder="+ Ex. john@smith.com">
+                    </div>
+
+                    <div class="mb-6 mb-[30px]">
+                        <label for="password" class="block mb-2 text-sm font-bold text-gray-900 ">Password</label>
+                        <input type="text" id="password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="Password">
+                        <a href="" class="text-sm text-secondary hover:underline mt-2">Forgot Password?</a>
+                    </div>
+                    <div class="g-recaptcha mt-[24px] mb-[35px]" data-sitekey="YOUR_SITE_KEY"></div>
+                    <div>
+                        <button class="bg-secondary text-white  py-5 px-4 rounded-[4px] w-full login-button-modal">Log
+                            In</button>
+                    </div>
+                    <div class="text-center">
+                        <p class="login-modal-bottom-text">Don’t have an account? <a href="javascript:;"
+                                class="text-secondary underline"
+                                onclick="toggleCreateAndLoginModal('loginModalEmployers', 'createAccountModalEmployers');">Create
+                                account</a>
+                        </p>
+
+                        <p class="login-modal-bottom-text pb-10">
+                            By logging in, you agree to our <a href="https://afitd-test.web.app/home/FAQ/terms"
+                                target="_blank" class="text-secondary underline">Terms and
+                                Conditions</a> and
+                            <br>
+                            <a href="https://afitd-test.web.app/home/FAQ/privacy" target="_blank"
+                                class="text-secondary underline">Privacy Policy</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Employers login modal end -->
+
+    <!-- JobSeeker login modal start  -->
+    <div id="loginModalJobSeeker" class="login-modal">
+        <!-- Modal content -->
+        <div class="login-modal-content">
+            <div class="login-modal-container">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="login-modal-close" onclick="closeModal('loginModalJobSeeker')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </span>
+                </div>
+                <h6 class="login-modal-title">Account Log in</h6>
+            </div>
+
+            <div class="login-modal-form-container">
+                <!-- login with buttons -->
+                <!-- apple login -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5 
+                    border border-transparent text-base font-medium text-white bg-black rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px]">
+                    <img src="./images/Modal/apple.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px] -ml-[17px]">Continue with
+                            Apple</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <!-- google button -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5
+                    border border-transparent text-base font-medium text-white rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px] bg-[#EBE9E9] mt-2 mb-6">
+                    <img class="w-[24px]" src="./images/Modal/google.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px]" style="color:rgba(0, 0, 0, 0.54);">Continue with
+                            Google</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <div class="flex justify-between items-center mb-[30px]">
+                    <hr class="w-[107px] h-[2px]">
+                    <p class="" style="color: #9B9E9C;">or log in with email</p>
+                    <hr class="w-[107px] h-[2px]">
+                </div>
+
+                <form action="">
+                    <div class="mb-6">
+                        <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Email
+                            Address</label>
+                        <input type="text" id="email-address"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                            placeholder="+ Ex. john@smith.com">
+                    </div>
+
+                    <div class="mb-6 mb-[30px]">
+                        <label for="password" class="block mb-2 text-sm font-bold text-gray-900 ">Password</label>
+                        <input type="text" id="password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="Password">
+                        <a href="" class="text-sm text-secondary hover:underline mt-2">Forgot Password?</a>
+                    </div>
+                    <div class="g-recaptcha mt-[24px] mb-[35px]" data-sitekey="YOUR_SITE_KEY"></div>
+                    <div>
+                        <button class="bg-secondary text-white  py-5 px-4 rounded-[4px] w-full login-button-modal">Log
+                            In</button>
+                    </div>
+                    <div class="text-center">
+                        <p class="login-modal-bottom-text">Don’t have an account? <a href="javascript:;"
+                                class="text-secondary underline"
+                                onclick="toggleCreateAndLoginModal('loginModalJobSeeker', 'createAccountModalJobSeeker');">Create
+                                account</a>
+                        </p>
+
+                        <p class="login-modal-bottom-text pb-10">
+                            By logging in, you agree to our <a href="https://afitd-test.web.app/home/FAQ/terms"
+                                target="_blank" class="text-secondary underline">Terms and
+                                Conditions</a> and
+                            <br>
+                            <a href="https://afitd-test.web.app/home/FAQ/privacy" target="_blank"
+                                class="text-secondary underline">Privacy Policy</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Employers login modal end -->
+
+    <!--  create account modal start -->
+    <div id="createAccountModal" class="create-account-modal">
+        <!-- Modal content -->
+        <div class="create-account-modal-content">
+            <div class="create-account-modal-container">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="create-account-modal-close" onclick="closeModal('createAccountModal')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </span>
+                </div>
+                <h6 class="create-account-modal-title">Create your Account</h6>
+            </div>
+
+            <div class="create-account-modal-form-container">
+                <!-- create-account with buttons -->
+                <!-- apple create-account -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5 
+                    border border-transparent text-base font-medium text-white bg-black rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px]">
+                    <img src="./images/Modal/apple.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px] -ml-[17px]">Continue with
+                            Apple</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <!-- google button -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5
+                    border border-transparent text-base font-medium text-white rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px] bg-[#EBE9E9] mt-2 mb-6">
+                    <img class="w-[24px]" src="./images/Modal/google.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px]" style="color:rgba(0, 0, 0, 0.54);">Continue with
+                            Google</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <div class="flex justify-between items-center mb-[30px]">
+                    <hr class="w-[80px] h-[2px]">
+                    <p class="" style="color: #9B9E9C;">or create account with email</p>
+                    <hr class="w-[80px] h-[2px]">
+                </div>
+
+                <form action="">
+                    <div class="flex">
+                        <div class="w-1/2 mr-[10px]">
+                            <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">First Name
+                            </label>
+                            <input type="text" id="email-address"
+                                class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                                placeholder="+ Ex. john">
+                        </div>
+                        <div class="w-1/2 ml-[10px]">
+                            <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Last Name
+                            </label>
+                            <input type="text" id="email-address"
+                                class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                                placeholder="+ Ex. smith">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Email
+                            Address</label>
+                        <input type="text" id="email-address"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                            placeholder="+ Ex. john@smith.com">
+                    </div>
+
+                    <div class="mb-6 mb-[30px]">
+                        <label for="password" class="block mb-2 text-sm font-bold text-gray-900 ">Password</label>
+                        <input type="text" id="password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="New Password">
+                        <p class="ml-[14px] mr-[14px] mt-[3px]" style="font-size:12px; color: #9B9E9C;">Password must be
+                            minimum 8
+                            chracters
+                            long and should
+                            contain <br> at least
+                            1 lowercase letter,
+                            1
+                            uppercase letter, 1 special character, <br> and 1 number</p>
+
+                    </div>
+                    <div class="mb-6 mb-[30px]">
+                        <label for="confirm-confirm-password"
+                            class="block mb-2 text-sm font-bold text-gray-900 ">Confirm Password</label>
+                        <input type="text" id="confirm-password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="Confirm Password">
+
+                    </div>
+
+                    <div>
+                        <div class="flex items-center my-[16px]">
+                            <input type="radio" name="job-seeker" id="image3" class="radioButtons" checked>
+                            <label for="image3" style="cursor: pointer
+                        ;">I am a Job Seeker
+                            </label>
+                        </div>
+
+                        <div class="flex items-center my-[16px]">
+                            <input type="radio" name="job-seeker" id="image3" class="radioButtons">
+                            <label for="image3" style="cursor: pointer
+                        ;">I am an Employer/ Recruiter
+                            </label>
+                        </div>
+                    </div>
+                    <div class="g-recaptcha mt-[24px] mb-[35px]" data-sitekey="YOUR_SITE_KEY"></div>
+                    <div>
+                        <button
+                            class="bg-secondary text-white  py-5 px-4 rounded-[4px] w-full create-account-button-modal">Create
+                            account</button>
+                    </div>
+                    <div class="text-center my-[20px]">
+                        <p><a href="javascript:;" class="text-secondary underline"
+                                onclick="toggleCreateAndLoginModal('createAccountModal', 'loginModal');">I
+                                already have an account</a>
+                        </p>
+
+                        <p class="create-account-modal-bottom-text pb-10">
+                            By logging in, you agree to our <a href="https://afitd-test.web.app/home/FAQ/terms"
+                                target="_blank" class="text-secondary underline">Terms and
+                                Conditions</a> and
+                            <br>
+                            <a href="https://afitd-test.web.app/home/FAQ/privacy" target="_blank"
+                                class="text-secondary underline">Privacy Policy</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--  create account modal end -->
+
+    <!--  create Employers account modal start -->
+    <div id="createAccountModalEmployers" class="create-account-modal">
+        <!-- Modal content -->
+        <div class="create-account-modal-content">
+            <div class="create-account-modal-container">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="create-account-modal-close" onclick="closeModal('createAccountModalEmployers')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </span>
+                </div>
+                <h6 class="create-account-modal-title">Create your Account</h6>
+            </div>
+
+            <div class="create-account-modal-form-container">
+                <!-- create-account with buttons -->
+                <!-- apple create-account -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5 
+                border border-transparent text-base font-medium text-white bg-black rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px]">
+                    <img src="./images/Modal/apple.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px] -ml-[17px]">Continue with
+                            Apple</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <!-- google button -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5
+                border border-transparent text-base font-medium text-white rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px] bg-[#EBE9E9] mt-2 mb-6">
+                    <img class="w-[24px]" src="./images/Modal/google.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px]" style="color:rgba(0, 0, 0, 0.54);">Continue with
+                            Google</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <div class="flex justify-between items-center mb-[30px]">
+                    <hr class="w-[80px] h-[2px]">
+                    <p class="" style="color: #9B9E9C;">or create account with email</p>
+                    <hr class="w-[80px] h-[2px]">
+                </div>
+
+                <form action="">
+                    <div class="flex">
+                        <div class="w-1/2 mr-[10px]">
+                            <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">First Name
+                            </label>
+                            <input type="text" id="email-address"
+                                class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                                placeholder="+ Ex. john">
+                        </div>
+                        <div class="w-1/2 ml-[10px]">
+                            <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Last Name
+                            </label>
+                            <input type="text" id="email-address"
+                                class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                                placeholder="+ Ex. smith">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Email
+                            Address</label>
+                        <input type="text" id="email-address"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                            placeholder="+ Ex. john@smith.com">
+                    </div>
+
+                    <div class="mb-6 mb-[30px]">
+                        <label for="password" class="block mb-2 text-sm font-bold text-gray-900 ">Password</label>
+                        <input type="text" id="password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="New Password">
+                        <p class="ml-[14px] mr-[14px] mt-[3px]" style="font-size:12px; color: #9B9E9C;">Password must be
+                            minimum 8
+                            chracters
+                            long and should
+                            contain <br> at least
+                            1 lowercase letter,
+                            1
+                            uppercase letter, 1 special character, <br> and 1 number</p>
+
+                    </div>
+                    <div class="mb-6 mb-[30px]">
+                        <label for="confirm-confirm-password"
+                            class="block mb-2 text-sm font-bold text-gray-900 ">Confirm Password</label>
+                        <input type="text" id="confirm-password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="Confirm Password">
+
+                    </div>
+
+                    <div>
+
+
+                        <div class="flex items-center my-[16px]">
+                            <input type="radio" name="job-seeker" id="image3" class="radioButtons" checked>
+                            <label for="image3" style="cursor: pointer
+                    ; color:#A0A5A0;">I am an Employer/ Recruiter
+                            </label>
+                        </div>
+                    </div>
+                    <div class="g-recaptcha mt-[24px] mb-[35px]" data-sitekey="YOUR_SITE_KEY"></div>
+                    <div>
+                        <button
+                            class="bg-secondary text-white  py-5 px-4 rounded-[4px] w-full create-account-button-modal">Create
+                            account</button>
+                    </div>
+                    <div class="text-center my-[20px]">
+                        <p><a href="javascript:;" class="text-secondary underline"
+                                onclick="toggleCreateAndLoginModal('createAccountModalEmployers', 'loginModalEmployers');">I
+                                already have an account</a>
+                        </p>
+
+                        <p class="create-account-modal-bottom-text pb-10">
+                            By logging in, you agree to our <a href="https://afitd-test.web.app/home/FAQ/terms"
+                                target="_blank" class="text-secondary underline">Terms and
+                                Conditions</a> and
+                            <br>
+                            <a href="https://afitd-test.web.app/home/FAQ/privacy" target="_blank"
+                                class="text-secondary underline">Privacy Policy</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--  create Employers account modal end -->
+
+    <!--  create Employers account modal start -->
+    <div id="createAccountModalJobSeeker" class="create-account-modal">
+        <!-- Modal content -->
+        <div class="create-account-modal-content">
+            <div class="create-account-modal-container">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="create-account-modal-close" onclick="closeModal('createAccountModalJobSeeker')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </span>
+                </div>
+                <h6 class="create-account-modal-title">Create your Account</h6>
+            </div>
+
+            <div class="create-account-modal-form-container">
+                <!-- create-account with buttons -->
+                <!-- apple create-account -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5 
+                border border-transparent text-base font-medium text-white bg-black rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px]">
+                    <img src="./images/Modal/apple.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px] -ml-[17px]">Continue with
+                            Apple</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <!-- google button -->
+                <button
+                    class="w-full inline-flex items-center justify-between px-5
+                border border-transparent text-base font-medium text-white rounded-[4px] focus:outline-none focus:ring-0 continue-with-modal-button py-[20px] bg-[#EBE9E9] mt-2 mb-6">
+                    <img class="w-[24px]" src="./images/Modal/google.svg" alt="">
+                    <div>
+                        <span class="font-bold font-size-[16px]" style="color:rgba(0, 0, 0, 0.54);">Continue with
+                            Google</span>
+                    </div>
+                    <div>
+                    </div>
+                </button>
+
+                <div class="flex justify-between items-center mb-[30px]">
+                    <hr class="w-[80px] h-[2px]">
+                    <p class="" style="color: #9B9E9C;">or create account with email</p>
+                    <hr class="w-[80px] h-[2px]">
+                </div>
+
+                <form action="">
+                    <div class="flex">
+                        <div class="w-1/2 mr-[10px]">
+                            <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">First Name
+                            </label>
+                            <input type="text" id="email-address"
+                                class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                                placeholder="+ Ex. john">
+                        </div>
+                        <div class="w-1/2 ml-[10px]">
+                            <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Last Name
+                            </label>
+                            <input type="text" id="email-address"
+                                class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                                placeholder="+ Ex. smith">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email-address" class="block mb-2 text-sm font-bold text-gray-900 ">Email
+                            Address</label>
+                        <input type="text" id="email-address"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] mb-[30px]"
+                            placeholder="+ Ex. john@smith.com">
+                    </div>
+
+                    <div class="mb-6 mb-[30px]">
+                        <label for="password" class="block mb-2 text-sm font-bold text-gray-900 ">Password</label>
+                        <input type="text" id="password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="New Password">
+                        <p class="ml-[14px] mr-[14px] mt-[3px]" style="font-size:12px; color: #9B9E9C;">Password must be
+                            minimum 8
+                            chracters
+                            long and should
+                            contain <br> at least
+                            1 lowercase letter,
+                            1
+                            uppercase letter, 1 special character, <br> and 1 number</p>
+                    </div>
+                    <div class="mb-6 mb-[30px]">
+                        <label for="confirm-confirm-password"
+                            class="block mb-2 text-sm font-bold text-gray-900 ">Confirm Password</label>
+                        <input type="text" id="confirm-password"
+                            class="block w-full p-3.5 text-gray-900 border border-gray-300 rounded-[4px] bg-white sm:text-md focus:ring-secondary hover:border-black focus:border-secondary focus:outline-none border-2 mt-[10px] "
+                            placeholder="Confirm Password">
+
+                    </div>
+
+                    <div>
+                        <div class="flex items-center my-[16px]">
+                            <input type="radio" name="job-seeker" id="image3" class="radioButtons" checked>
+                            <label for="image3" style="cursor: pointer
+                    ; color:#A0A5A0;">I am a Job Seeker
+                            </label>
+                        </div>
+                    </div>
+                    <div class="g-recaptcha mt-[24px] mb-[35px]" data-sitekey="YOUR_SITE_KEY"></div>
+                    <div>
+                        <button
+                            class="bg-secondary text-white  py-5 px-4 rounded-[4px] w-full create-account-button-modal">Create
+                            account</button>
+                    </div>
+                    <div class="text-center my-[20px]">
+                        <p><a href="javascript:;" class="text-secondary underline"
+                                onclick="toggleCreateAndLoginModal('createAccountModalJobSeeker', 'loginModalJobSeeker');">I
+                                already have an account</a>
+                        </p>
+
+                        <p class="create-account-modal-bottom-text pb-10">
+                            By logging in, you agree to our <a href="https://afitd-test.web.app/home/FAQ/terms"
+                                target="_blank" class="text-secondary underline">Terms and
+                                Conditions</a> and
+                            <br>
+                            <a href="https://afitd-test.web.app/home/FAQ/privacy" target="_blank"
+                                class="text-secondary underline">Privacy Policy</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--  create JobSeeker account modal end -->
+
+    <!-- see profile modal start -->
+    <!-- alice Modal start  -->
+    <div id="seeProfileModal1" class="see-profile-modal">
+        <!-- Modal content -->
+        <div class="three-container-box">
+            <div class="flex items-center arrow-back-style hidden md:block">
+                <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-back.png"
+                    onclick="toggleCreateAndLoginModal('seeProfileModal1', 'seeProfileModal4');" alt="">
+            </div>
+            <div class="see-profile-modal-content">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="pt-[29px] pr-[29px]" onclick="closeModal('seeProfileModal1')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="see-profile-modal-info-container md:flex">
+                    <div class="md:w-[20%] flex justify-around items-center md:flex md:justify-start md:items-start">
+                        <!-- arrow for sm  -->
+                        <div class="flex items-center arrow-back-style block md:hidden">
+                            <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-back.png"
+                                onclick="toggleCreateAndLoginModal('seeProfileModal1', 'seeProfileModal4');" alt="">
+                        </div>
+
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar-box">
+                                <img class="profile-avatar" src="./images/Modal/Profile/alice_profile_pic.jpg"
+                                    class="modal-profile-pic" alt="">
+                            </div>
+                        </div>
+                        <div class="flex items-center arrow-forward-style block md:hidden">
+                            <img class="cursor-pointer w-[40px] lg:w-full"
+                                src="./images/Modal/Profile/arrow-forward.png"
+                                onclick="toggleCreateAndLoginModal('seeProfileModal1', 'seeProfileModal2');" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-center md:text-left">
+                            <h1 class="modal-profile-name">Alice Rosenbaum</h1>
+                            <h1 class="modal-location">Cryptographer - Washington, District of Columbia, United States
+                            </h1>
+                        </div>
+
+
+                        <div
+                            class="modal-job-description flex items-center justify-center flex-wrap md:flex-no-wrap md:justify-start ">
+                            <div class="flex items-center mr-[20px]">
+                                <p class="modal-profile-icons">$</p>
+                                <p class="modal-profile-icons-text">75,000 - 80,000 USD per Year</p>
+                            </div>
+                            <div class="flex items-center mr-[20px]">
+                                <img class="modal-profile-icons" src="./images/Modal/Profile/mdi_schedule.png" alt="">
+                                <p class="modal-profile-icons-text">Full-time</p>
+                            </div>
+                            <div class="flex items-center mr-[20px]">
+                                <img class="modal-profile-icons" src="./images/Modal/Profile/mdi_school.png" alt="">
+                                <p class="modal-profile-icons-text">Bachelor’s Degree</p>
+                            </div>
+                        </div>
+                        <!-- button section -->
+                        <div class="about-me-with-button-section">
+
+
+                            <div class="grid grid-cols-12 pt-[10px] pb-[14px] ">
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex hidden md:flex">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-primary text-white rounded-[4px] mr-[10px] lg:mr-[30px]">
+                                        <img src="./images/Modal/Profile/mdi_calendar_today.png" alt="">
+                                        <span>Request Interview</span>
+                                    </button>
+
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary text-white rounded-[4px]">
+                                        <img src="./images/Modal/Profile/mdi_message.png" alt="">
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+                                <!-- for sm only-->
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex block md:hidden">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-primary text-white rounded-[4px] lg:mr-[30px] w-full md:w-fit">
+                                        <img src="./images/Modal/Profile/mdi_calendar_today.png" alt="">
+                                        <span>Request Interview</span>
+                                    </button>
+                                </div>
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex block md:hidden mt-[16px] md:mt-0">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary text-white rounded-[4px] w-full md:w-fit">
+                                        <img src="./images/Modal/Profile/mdi_message.png" alt="">
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+
+
+                                <div class="xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 mt-[16px] md:mt-0">
+                                    <div class="flex items-center justify-end md:justify-start lg:justify-end">
+                                        <button
+                                            class="flex items-center justify-center space-x-2 px-4 py-3  bg-[#F5F5F5] rounded-[4px] w-full md:w-fit">
+                                            <img src="./images/Modal/Profile/bookmark.png" alt="">
+                                            <span>Save to My Jobs</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="my-[7px]">
+                                <div class="bg-gray-400 h-[1px] w-full"></div>
+                            </div>
+
+                            <!-- about me section -->
+                            <div class="about-me-container py-[10px]">
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">About Me:</p>
+                                    <p class="my-[15px]" style="font-size: 15px;">I’m an ambitious self-starter
+                                        committed to
+                                        utilizing my skills in cyber analytics and advanced mathematics to keep our
+                                        country
+                                        safe
+                                        from online threats. As a former virtual assistant, I am highly organized and
+                                        detail
+                                        oriented, and am very familiar with upholding quality work standards while
+                                        working
+                                        remotely.</p>
+                                    <p class="my-[15px]" style="font-size: 15px;">
+                                        I am well versed in several programming languages, have exceptional mathematical
+                                        skills,
+                                        and recently completed a short contract with a big tech company as an Ethical
+                                        Hacker. I
+                                        will be graduating this Fall with a Masters in Mathematics from George Mason
+                                        University.
+                                        My goal is to combine the knowledge and skills I’ve gained thus far to obtain a
+                                        Cryptographer or Cyber Analyst role in the private sector.
+                                    </p>
+                                </div>
+
+                                <!-- Occupation section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Occupation:</p>
+                                    <div class="flex flex-wrap">
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Cryptographer</p>
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Cryptology</p>
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Cybersecurity Analyst</p>
+                                    </div>
+                                </div>
+
+                                <!-- skill section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Skillset:</p>
+                                    <div class="flex flex-wrap">
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Java</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            C Sharp (C#)</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            C++</p>
+
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Structured Query Language (SQL)</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            HTML</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            COBOL</p>
+                                    </div>
+                                </div>
+
+                                <!-- overview section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Video Overview:</p>
+                                    <video id="alice-video"
+                                        class="video-js sm:max-w-[300px] sm:max-h-[220px] md:max-w-[430px] md:max-h-[280px] lg:max-w-[590px]  lg:max-h-[400px]"
+                                        controls poster="./images/Modal/Profile/alice-thumbnail.png" data-setup="{}"
+                                        preload="auto">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+
+                                        <p class="vjs-no-js">
+                                            To view this video please enable JavaScript, and consider upgrading to a
+                                            web browser that
+                                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports
+                                                HTML5 video</a>
+                                        </p>
+                                    </video>
+                                </div>
+
+                                <!-- resume section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Resume:</p>
+                                    <div class="flex cursor-pointer">
+                                        <div class="flex items-center justify-center">
+                                            <img src="./images/Modal/Profile/pdf-icon.png" alt="">
+                                        </div>
+                                        <div class="ml-[20px]" style="font-size: 14px">
+                                            <p>Alice_Resume_1.pdf</p>
+                                            <p>04/16/2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- resume section -->
+                                <div>
+                                    <p class="font-bold mt-[20px]" style="font-size: 16px;">Social Media:</p>
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/facebook.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] pb-[10px] pl-[15px]">
+                                            <p class="font-bold">Facebook</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/alice_facebook.306d505a4c03fbf4cb65.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.facebook.com/?alice_rosenbaum</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/linkedin.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] pb-[10px] pl-[15px]">
+                                            <p class="font-bold">LinkedIn</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/alice_linkedin.8ee43baf1e41ec7b8461.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.linkedin.com/?alice_rosenbaum</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/instagram.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] lg:pb-[10px] pl-[15px]">
+                                            <p class="font-bold">Instagram</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/alice_instagram.7fba85adaa64aa9524f0.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.instagram.com/?allaboutalice</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center arrow-forward-style hidden md:block">
+                <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-forward.png"
+                    onclick="toggleCreateAndLoginModal('seeProfileModal1', 'seeProfileModal2');" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <!-- alice Modal end  -->
+
+    <!-- Silas Modal start  -->
+    <div id="seeProfileModal2" class="see-profile-modal">
+        <!-- Modal content -->
+        <div class="three-container-box">
+            <div class="flex items-center arrow-back-style hidden md:block">
+                <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-back.png"
+                    onclick="toggleCreateAndLoginModal('seeProfileModal2', 'seeProfileModal1');" alt="">
+            </div>
+            <div class="see-profile-modal-content">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="pt-[29px] pr-[29px]" onclick="closeModal('seeProfileModal2')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="see-profile-modal-info-container md:flex">
+                    <div class="md:w-[20%] flex justify-around items-center md:flex md:justify-start md:items-start">
+                        <!-- arrow for sm  -->
+                        <div class="flex items-center arrow-back-style block md:hidden">
+                            <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-back.png"
+                                onclick="toggleCreateAndLoginModal('seeProfileModal2', 'seeProfileModal1');" alt="">
+                        </div>
+
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar-box flex justify-center align-center">
+                                <img class="profile-avatar w-[92px] h-[92px]"
+                                    src="./images/Modal/Profile/silas_profile_pic.jpg" class="modal-profile-pic" alt="">
+                            </div>
+                        </div>
+                        <div class="flex items-center arrow-forward-style block md:hidden">
+                            <img class="cursor-pointer w-[40px] lg:w-full"
+                                src="./images/Modal/Profile/arrow-forward.png"
+                                onclick="toggleCreateAndLoginModal('seeProfileModal2', 'seeProfileModal3');" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-center md:text-left">
+                            <h1 class="modal-profile-name">Silas Adams</h1>
+                            <h1 class="modal-location">Architect - New York, New York, United States
+                            </h1>
+                        </div>
+
+
+                        <div
+                            class="modal-job-description flex items-center justify-center flex-wrap md:flex-no-wrap md:justify-start ">
+                            <div class="flex items-center mr-[20px]">
+                                <p class="modal-profile-icons">$</p>
+                                <p class="modal-profile-icons-text">80,000 - 90,000 USD per Year</p>
+                            </div>
+                            <div class="flex items-center mr-[20px]">
+                                <img class="modal-profile-icons" src="./images/Modal/Profile/mdi_schedule.png" alt="">
+                                <p class="modal-profile-icons-text">Full-time</p>
+                            </div>
+                            <div class="flex items-center mr-[20px]">
+                                <img class="modal-profile-icons" src="./images/Modal/Profile/mdi_school.png" alt="">
+                                <p class="modal-profile-icons-text">Bachelor’s Degree</p>
+                            </div>
+                        </div>
+                        <!-- button section -->
+                        <div class="about-me-with-button-section">
+                            <div class="grid grid-cols-12 pt-[10px] pb-[14px] ">
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex hidden md:flex">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-primary text-white rounded-[4px] mr-[10px] lg:mr-[30px]">
+                                        <img src="./images/Modal/Profile/mdi_calendar_today.png" alt="">
+                                        <span>Request Interview</span>
+                                    </button>
+
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary text-white rounded-[4px]">
+                                        <img src="./images/Modal/Profile/mdi_message.png" alt="">
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+                                <!-- for sm only-->
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex block md:hidden">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-primary text-white rounded-[4px] lg:mr-[30px] w-full md:w-fit">
+                                        <img src="./images/Modal/Profile/mdi_calendar_today.png" alt="">
+                                        <span>Request Interview</span>
+                                    </button>
+                                </div>
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex block md:hidden mt-[16px] md:mt-0">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary text-white rounded-[4px] w-full md:w-fit">
+                                        <img src="./images/Modal/Profile/mdi_message.png" alt="">
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+
+
+                                <div class="xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 mt-[16px] md:mt-0">
+                                    <div class="flex items-center justify-end md:justify-start lg:justify-end">
+                                        <button
+                                            class="flex items-center justify-center space-x-2 px-4 py-3  bg-[#F5F5F5] rounded-[4px] w-full md:w-fit">
+                                            <img src="./images/Modal/Profile/bookmark.png" alt="">
+                                            <span>Save to My Jobs</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="my-[7px]">
+                                <div class="bg-gray-400 h-[1px] w-full"></div>
+                            </div>
+
+                            <!-- about me section -->
+                            <div class="about-me-container py-[10px]">
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">About Me:</p>
+                                    <p class="my-[15px]" style="font-size: 15px;">I’m a second generation architect in
+                                        New York City looking to obtain a position with an established architecture and
+                                        design firm. I believe that communities, and society as a whole, can be
+                                        strengthened through architecture, which is why I specialize in restoration
+                                        design. My ultimate goal is to build up underserved areas of New York to bring
+                                        them back to life and provide quality homes and business space that enable
+                                        residents to thrive.</p>
+                                    <p class="my-[15px]" style="font-size: 15px;">
+                                        I’m a highly motivated individual with natural leadership capabilities. I
+                                        approach solving problems analytically and creatively. I’ve found success in
+                                        both independent and team environments, but like the communities we build, I
+                                        find that the best progress happens when working together.
+                                    </p>
+                                </div>
+
+                                <!-- Occupation section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Occupation:</p>
+                                    <div class="flex flex-wrap">
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Architecture</p>
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Architect Designer</p>
+
+                                    </div>
+                                </div>
+
+                                <!-- skill section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Skillset:</p>
+                                    <div class="flex flex-wrap">
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            SketchUp</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            ArchiCAD</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Adobe CC</p>
+
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Communication</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Advanced Math</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Analytical Problem Resolution</p>
+                                    </div>
+                                </div>
+
+                                <!-- overview section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Video Overview:</p>
+                                    <video id="alice-video"
+                                        class="video-js sm:max-w-[300px] sm:max-h-[220px] md:max-w-[430px] md:max-h-[280px] lg:max-w-[590px]  lg:max-h-[400px]"
+                                        controls poster="./images/Modal/Profile/silas_thumbnail.png" data-setup="{}"
+                                        preload="auto">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+
+                                        <p class="vjs-no-js">
+                                            To view this video please enable JavaScript, and consider upgrading to a
+                                            web browser that
+                                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports
+                                                HTML5 video</a>
+                                        </p>
+                                    </video>
+                                </div>
+
+                                <!-- resume section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Resume:</p>
+                                    <div class="flex cursor-pointer">
+                                        <div class="flex items-center justify-center">
+                                            <img src="./images/Modal/Profile/pdf-icon.png" alt="">
+                                        </div>
+                                        <div class="ml-[20px]" style="font-size: 14px">
+                                            <p>Silas_Adams_Architect_Resume.pdf</p>
+                                            <p>04/21/2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- resume section -->
+                                <div>
+                                    <p class="font-bold mt-[20px]" style="font-size: 16px;">Social Media:</p>
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/facebook.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] pb-[10px] pl-[15px]">
+                                            <p class="font-bold">Facebook</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/silas_facebook.c1db0589c3ef3f7519ff.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.facebook.com/?silas_adams</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/linkedin.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] pb-[10px] pl-[15px]">
+                                            <p class="font-bold">LinkedIn</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/silas_linkedin.3a875f668e1cca5b9611.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.linkedin.com/?silas_adams</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/instagram.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] lg:pb-[10px] pl-[15px]">
+                                            <p class="font-bold">Instagram</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/silas_instagram.042470b35253c3c2ba86.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.instagram.com/?silasbuilds_</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center arrow-forward-style hidden md:block">
+                <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-forward.png"
+                    onclick="toggleCreateAndLoginModal('seeProfileModal2', 'seeProfileModal3');" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Silas Modal end  -->
+
+    <!-- Micah Modal start  -->
+    <div id="seeProfileModal3" class="see-profile-modal">
+        <!-- Modal content -->
+        <div class="three-container-box">
+            <div class="flex items-center arrow-back-style hidden md:block">
+                <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-back.png"
+                    onclick="toggleCreateAndLoginModal('seeProfileModal3', 'seeProfileModal2');" alt="">
+            </div>
+            <div class="see-profile-modal-content">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="pt-[29px] pr-[29px]" onclick="closeModal('seeProfileModal3')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="see-profile-modal-info-container md:flex">
+                    <div class="md:w-[20%] flex justify-around items-center md:flex md:justify-start md:items-start">
+                        <!-- arrow for sm  -->
+                        <div class="flex items-center arrow-back-style block md:hidden">
+                            <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-back.png"
+                                onclick="toggleCreateAndLoginModal('seeProfileModal3', 'seeProfileModal2');" alt="">
+                        </div>
+
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar-box">
+                                <img class="profile-avatar" src="./images/Modal/Profile/micah_profile_pic.jpg"
+                                    class="modal-profile-pic" alt="">
+                            </div>
+                        </div>
+                        <div class="flex items-center arrow-forward-style block md:hidden">
+                            <img class="cursor-pointer w-[40px] lg:w-full"
+                                src="./images/Modal/Profile/arrow-forward.png"
+                                onclick="toggleCreateAndLoginModal('seeProfileModal3', 'seeProfileModal4');" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-center md:text-left">
+                            <h1 class="modal-profile-name">Micah Roberts</h1>
+                            <h1 class="modal-location">Wind Turbine Tech Internship - Waco, Texas, United States
+                            </h1>
+                        </div>
+
+                        <div
+                            class="modal-job-description flex items-center justify-center flex-wrap md:flex-no-wrap md:justify-start ">
+                            <div class="flex items-center mr-[20px]">
+                                <p class="modal-profile-icons">$</p>
+                                <p class="modal-profile-icons-text">25,000 USD per Year</p>
+                            </div>
+                            <div class="flex items-center mr-[20px]">
+                                <img class="modal-profile-icons" src="./images/Modal/Profile/mdi_schedule.png" alt="">
+                                <p class="modal-profile-icons-text">Part-time, Internship</p>
+                            </div>
+                            <div class="flex items-center mr-[20px]">
+                                <img class="modal-profile-icons" src="./images/Modal/Profile/mdi_school.png" alt="">
+                                <p class="modal-profile-icons-text">Some College</p>
+                            </div>
+                        </div>
+                        <!-- button section -->
+                        <div class="about-me-with-button-section">
+
+
+                            <div class="grid grid-cols-12 pt-[10px] pb-[14px] ">
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex hidden md:flex">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-primary text-white rounded-[4px] mr-[10px] lg:mr-[30px]">
+                                        <img src="./images/Modal/Profile/mdi_calendar_today.png" alt="">
+                                        <span>Request Interview</span>
+                                    </button>
+
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary text-white rounded-[4px]">
+                                        <img src="./images/Modal/Profile/mdi_message.png" alt="">
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+                                <!-- for sm only-->
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex block md:hidden">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-primary text-white rounded-[4px] lg:mr-[30px] w-full md:w-fit">
+                                        <img src="./images/Modal/Profile/mdi_calendar_today.png" alt="">
+                                        <span>Request Interview</span>
+                                    </button>
+                                </div>
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex block md:hidden mt-[16px] md:mt-0">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary text-white rounded-[4px] w-full md:w-fit">
+                                        <img src="./images/Modal/Profile/mdi_message.png" alt="">
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+
+
+                                <div class="xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 mt-[16px] md:mt-0">
+                                    <div class="flex items-center justify-end md:justify-start lg:justify-end">
+                                        <button
+                                            class="flex items-center justify-center space-x-2 px-4 py-3  bg-[#F5F5F5] rounded-[4px] w-full md:w-fit">
+                                            <img src="./images/Modal/Profile/bookmark.png" alt="">
+                                            <span>Save to My Jobs</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="my-[7px]">
+                                <div class="bg-gray-400 h-[1px] w-full"></div>
+                            </div>
+
+                            <!-- about me section -->
+                            <div class="about-me-container py-[10px]">
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">About Me:</p>
+                                    <p class="my-[15px]" style="font-size: 15px;">I’m currently a student at Texas State
+                                        Technical College pursuing their Wind Turbine Technician program. Growing up on
+                                        a farm, I have a background in mechanics and excel at thinking critically to
+                                        complete troubleshooting and repairs for major machinery. I hope to combine that
+                                        knowledge with what I’m learning at TSTC to obtain an internship with a
+                                        reputable environmental company in order to gain real wind technology
+                                        experience.</p>
+                                    <p class="my-[15px]" style="font-size: 15px;">
+                                        In addition to mechanical, diagnostic, and repair skills, I’m also adept at
+                                        reading schematics, completing timely records/documentation, and have
+                                        entry-level experience performing electrical repairs. I’m an innovative thinker
+                                        and problem solver who is highly motivated to help our country transition to
+                                        sustainable energy resources.
+                                    </p>
+                                </div>
+
+                                <!-- Occupation section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Occupation:</p>
+                                    <div class="flex flex-wrap">
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Wind Technician</p>
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Student Intern
+                                        </p>
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Wind Energy Engineer</p>
+                                    </div>
+                                </div>
+
+                                <!-- skill section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Skillset:</p>
+                                    <div class="flex flex-wrap">
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Construction Workflow</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Workplace Safety</p>
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Mechanical Technician</p>
+
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Equipment Layout</p>
+
+                                    </div>
+                                </div>
+
+                                <!-- overview section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Video Overview:</p>
+                                    <video id="alice-video"
+                                        class="video-js sm:max-w-[300px] sm:max-h-[220px] md:max-w-[430px] md:max-h-[280px] lg:max-w-[590px]  lg:max-h-[400px]"
+                                        controls poster="./images/Modal/Profile/micah_thumbnail.png" data-setup="{}"
+                                        preload="auto">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+
+                                        <p class="vjs-no-js">
+                                            To view this video please enable JavaScript, and consider upgrading to a
+                                            web browser that
+                                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports
+                                                HTML5 video</a>
+                                        </p>
+                                    </video>
+                                </div>
+
+                                <!-- resume section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Resume:</p>
+                                    <div class="flex cursor-pointer">
+                                        <div class="flex items-center justify-center">
+                                            <img src="./images/Modal/Profile/pdf-icon.png" alt="">
+                                        </div>
+                                        <div class="ml-[20px]" style="font-size: 14px">
+                                            <p>2023_04_Resume.pdf</p>
+                                            <p>04/16/2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- resume section -->
+                                <div>
+                                    <p class="font-bold mt-[20px]" style="font-size: 16px;">Social Media:</p>
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/facebook.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] pb-[10px] pl-[15px]">
+                                            <p class="font-bold">Facebook</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/micah_facebook.c72ac69f8056a2cfb87a.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.facebook.com/?micah_roberts</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/linkedin.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] pb-[10px] pl-[15px]">
+                                            <p class="font-bold">LinkedIn</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/micah_linkedin.6ffe888d3a57d11b9412.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.linkedin.com/?micah_roberts</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/instagram.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] lg:pb-[10px] pl-[15px]">
+                                            <p class="font-bold">Instagram</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/micah_instagram.a83a0540ce61fabd7b24.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.instagram.com/?enviromike</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center arrow-forward-style hidden md:block">
+                <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-forward.png"
+                    onclick="toggleCreateAndLoginModal('seeProfileModal3', 'seeProfileModal4');" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Micah Modal end  -->
+
+    <!-- Jada Flores Modal start  -->
+    <div id="seeProfileModal4" class="see-profile-modal">
+        <!-- Modal content -->
+        <div class="three-container-box">
+            <div class="flex items-center arrow-back-style hidden md:block">
+                <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-back.png"
+                    onclick="toggleCreateAndLoginModal('seeProfileModal4', 'seeProfileModal3');" alt="">
+            </div>
+            <div class="see-profile-modal-content">
+                <div class="flex justify-end">
+                    <!-- close icon -->
+                    <span class="pt-[29px] pr-[29px]" onclick="closeModal('seeProfileModal4')">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="see-profile-modal-info-container md:flex">
+                    <div class="md:w-[20%] flex justify-around items-center md:flex md:justify-start md:items-start">
+                        <!-- arrow for sm  -->
+                        <div class="flex items-center arrow-back-style block md:hidden">
+                            <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-back.png"
+                                onclick="toggleCreateAndLoginModal('seeProfileModal4', 'seeProfileModal3');" alt="">
+                        </div>
+
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar-box">
+                                <img class="profile-avatar" src="./images/Modal/Profile/jada_profile_pic.jpg"
+                                    class="modal-profile-pic" alt="">
+                            </div>
+                        </div>
+                        <div class="flex items-center arrow-forward-style block md:hidden">
+                            <img class="cursor-pointer w-[40px] lg:w-full"
+                                src="./images/Modal/Profile/arrow-forward.png"
+                                onclick="toggleCreateAndLoginModal('seeProfileModal4', 'seeProfileModal1');" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-center md:text-left">
+                            <h1 class="modal-profile-name">Jada Flores</h1>
+                            <h1 class="modal-location">Makeup Artist - Los Angeles, California, United States
+                            </h1>
+                        </div>
+
+                        <div
+                            class="modal-job-description flex items-center justify-center flex-wrap md:flex-no-wrap md:justify-start ">
+                            <div class="flex items-center mr-[20px]">
+                                <p class="modal-profile-icons">$</p>
+                                <p class="modal-profile-icons-text">50,000 - 60,000 USD per Year</p>
+                            </div>
+                            <div class="flex items-center mr-[20px]">
+                                <img class="modal-profile-icons" src="./images/Modal/Profile/mdi_schedule.png" alt="">
+                                <p class="modal-profile-icons-text">Gig Work</p>
+                            </div>
+                            <div class="flex items-center mr-[20px]">
+                                <img class="modal-profile-icons" src="./images/Modal/Profile/mdi_school.png" alt="">
+                                <p class="modal-profile-icons-text">Hollywood Makeup School</p>
+                            </div>
+                        </div>
+                        <!-- button section -->
+                        <div class="about-me-with-button-section">
+
+                            <div class="grid grid-cols-12 pt-[10px] pb-[14px] ">
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex hidden md:flex">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-primary text-white rounded-[4px] mr-[10px] lg:mr-[30px]">
+                                        <img src="./images/Modal/Profile/mdi_calendar_today.png" alt="">
+                                        <span>Request Interview</span>
+                                    </button>
+
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary text-white rounded-[4px]">
+                                        <img src="./images/Modal/Profile/mdi_message.png" alt="">
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+                                <!-- for sm only-->
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex block md:hidden">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-primary text-white rounded-[4px] lg:mr-[30px] w-full md:w-fit">
+                                        <img src="./images/Modal/Profile/mdi_calendar_today.png" alt="">
+                                        <span>Request Interview</span>
+                                    </button>
+                                </div>
+                                <div
+                                    class="xl:col-span-8 lg:col-span-8 md:col-span-8 sm:col-span-12 flex block md:hidden mt-[16px] md:mt-0">
+                                    <button
+                                        class="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary text-white rounded-[4px] w-full md:w-fit">
+                                        <img src="./images/Modal/Profile/mdi_message.png" alt="">
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+
+
+                                <div class="xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 mt-[16px] md:mt-0">
+                                    <div class="flex items-center justify-end md:justify-start lg:justify-end">
+                                        <button
+                                            class="flex items-center justify-center space-x-2 px-4 py-3  bg-[#F5F5F5] rounded-[4px] w-full md:w-fit">
+                                            <img src="./images/Modal/Profile/bookmark.png" alt="">
+                                            <span>Save to My Jobs</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="my-[7px]">
+                                <div class="bg-gray-400 h-[1px] w-full"></div>
+                            </div>
+
+                            <!-- about me section -->
+                            <div class="about-me-container py-[10px]">
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">About Me:</p>
+                                    <p class="my-[15px]" style="font-size: 15px;">I am a licensed professional makeup
+                                        artist looking for freelance or contract opportunities in LA. My background
+                                        includes theatrical makeup, entertainment/personality makeup, and special
+                                        effects makeup. I’ve had wonderful opportunities to work with local television
+                                        networks, and have also been a personal stylist/artist for several VIP clients.
+                                        My passion is special effects makeup, but I enjoy any chance to be creative with
+                                        my brushes.</p>
+                                    <p class="my-[15px]" style="font-size: 15px;">
+                                        I take pride in continuing education and make an effort to complete training and
+                                        classes annually to ensure that I’m up to date on the latest industry trends and
+                                        techniques. I take client safety and anonymity very seriously and whether the
+                                        opportunity is on location or in my studio, I will ensure a professional
+                                        environment.
+                                    </p>
+                                </div>
+
+                                <!-- Occupation section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Occupation:</p>
+                                    <div class="flex flex-wrap">
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Makeup Artist</p>
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Cosmetologist
+                                        </p>
+                                        <p
+                                            class="bg-secondary rounded-[4px] text-white py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Cinematic Makeup Artist</p>
+                                    </div>
+                                </div>
+
+                                <!-- skill section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Skillset:</p>
+                                    <div class="flex flex-wrap">
+                                        <p
+                                            class="bg-grayLight rounded-[4px] py-[9px] px-[10px] my-[9px] mr-[9px] font-normal text-sm inline-block">
+                                            Special Effects Makeup</p>
+                                    </div>
+                                </div>
+
+                                <!-- overview section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Video Overview:</p>
+                                    <video id="alice-video"
+                                        class="video-js sm:max-w-[300px] sm:max-h-[220px] md:max-w-[430px] md:max-h-[280px] lg:max-w-[590px]  lg:max-h-[400px]"
+                                        controls poster="./images/Modal/Profile/jada_thumbnail.png" data-setup="{}"
+                                        preload="auto">
+                                        <source
+                                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                            type="video/mp4">
+
+                                        <p class="vjs-no-js">
+                                            To view this video please enable JavaScript, and consider upgrading to a
+                                            web browser that
+                                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports
+                                                HTML5 video</a>
+                                        </p>
+                                    </video>
+                                </div>
+
+                                <!-- resume section -->
+                                <div>
+                                    <p class="font-bold mt-[10px]" style="font-size: 16px;">Resume:</p>
+                                    <div class="flex cursor-pointer">
+                                        <div class="flex items-center justify-center">
+                                            <img src="./images/Modal/Profile/pdf-icon.png" alt="">
+                                        </div>
+                                        <div class="ml-[20px]" style="font-size: 14px">
+                                            <p>Jada_Resume_2023.docx</p>
+                                            <p>04/18/2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- resume section -->
+                                <div>
+                                    <p class="font-bold mt-[20px]" style="font-size: 16px;">Social Media:</p>
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/facebook.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] pb-[10px] pl-[15px]">
+                                            <p class="font-bold">Facebook</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/jada_facebook.2ce62f1a35322b7421eb.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.facebook.com/?jada_flores</a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/instagram.svg" alt="">
+                                        </div>
+                                        <div class="pt-[15px] lg:pb-[10px] pl-[15px]">
+                                            <p class="font-bold">Instagram</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/jada_instagram.ddfa297c61340a49cd20.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.instagram.com/?jadabeauty_la</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex social-media-box">
+                                        <div class="mx-[8px] pt-[8px]">
+                                            <img class="w-[46px]" src="./images/Modal/Profile/youtube.svg" alt="">
+
+                                        </div>
+                                        <div class="pt-[15px] pb-[10px] pl-[15px]">
+                                            <p class="font-bold">YouTube</p>
+                                            <a class="text-secondary underline text-sm"
+                                                href="https://afitd-test.web.app/static/media/jada_youtube.3fbfbeb998014af6ee3b.jpg"
+                                                target="_blank" rel="noopener noreferrer">
+                                                https://www.youtube.com/?jadabeauty_la</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center arrow-forward-style hidden md:block">
+                <img class="cursor-pointer w-[40px] lg:w-full" src="./images/Modal/Profile/arrow-forward.png"
+                    onclick="toggleCreateAndLoginModal('seeProfileModal4', 'seeProfileModal1');" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Jada Flores Modal end  -->
+
+    <!--  see profile modal end-->
+    <!--  modal section end -->
+
+
+    <!-- home banner start -->
+    <section class="homeBannerContainer mt-20 pt-8" id="homeBannerContainer">
+        <div class=" xl:px-[7.5rem] lg:px-10 md:px-9 sm:px-5 sx:px-6 ">
+            <div class="md:px-8 lg:px-0">
+                <h1 class="bannerHeading">
+                    Show The World What You’ve Got.
+                    <br />
+                    Find Jobs That Fit Your Story.
+                </h1>
+                <p class="bannerParagraph">
+                    <span class="font-bold"> A Foot in the Door</span> is a next-generation job search platform
+                    dedicated exclusively to job <br class="lg:block md:hidden sm:hidden xs:hidden" />
+                    seekers with 0-5 years of work experience.
+                </p>
+
+
+                <!-- search from here  -->
+                <a href="https://afitd-test.web.app/job-center">
+                    <div class="mx-auto flex flex-col md:flex-row bg-white rounded-[5px] relative">
+                        <button type="button"
+                            class="h-12 px-4 md:h-auto flex items-center justify-left text-[#111e1466] bg-white md:w-[48%] w-full font-semibold rounded-[5px] text-[15px] w-full py-4 text-left md:mr-0 ">
+                            <svg class="w-8 h-8 mr-1 text-black" fill="currentColor" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                </path>
+                            </svg>
+                            <span class="search-button-text">Search Job Titles</span>
+
+                        </button>
+                        <div class="border-l my-3 hidden md:block"></div>
+                        <hr class="h-px md:hidden bg-gray-200 border-0" />
+                        <button type="button"
+                            class="h-12 md:h-auto px-2 flex items-center justify-left text-[#111e1466] bg-white md:w-[52%] w-full font-semibold rounded-[5px] text-[15px] w-full py-4 text-left md:mr-0">
+                            <svg class="w-7 h-7 mr-1 text-black" fill="currentColor" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+                                </path>
+                            </svg>
+                            <span class="search-button-text">City or State / Province</span>
+                        </button>
+
+                        <button type="button"
+                            class="absolute top-1/2 right-0 transform -translate-x-1/3 -translate-y-1/2 right-0 bg-black flex items-center justify-center ont-semibold rounded-[5px] text-white text-center text-[15px] h-[45px] w-[45px] py-4 right-arrow-button">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </a>
+            </div>
+            <!-- md up -->
+            <div class="sm:hidden xs:hidden md:block bannerImageContainer ">
+                <img class="circleImage" src='./images/Banner/circle-bottom.png' alt="" />
+            </div>
+
+        </div>
+    </section>
+
+    <!-- How it's work section -->
+    <section class="xl:px-[7.5rem] lg:px-10 md:px-9 sm:px-5 sx:px-6  mb-24 mt-20">
+        <div class="mainContainer ">
+            <h1 class="heading pb-20">How It Works</h1>
+            <!-- for xl lg only -->
+            <div class="howItWorks lg:block xl:block md:hidden sm:hidden sx:hidden ">
+                <div class="stepsContainer">
+                    <div class="stepCreate">
+                        <div class="text-center">
+                            <img src="./images/Landing/Vector1.png" alt="" />
+                        </div>
+
+                        <div class="stepBox">STEP 1</div>
+                        <div class="stepNameCreateAcc">Create an account</div>
+                    </div>
+                    <div class="step2">
+                        <div class="imageContainer2">
+                            <img src="./images/Landing/Vector2.png" alt="" />
+                        </div>
+                        <div class="stepBox">STEP 2</div>
+                        <div class="stepNameUpload">
+                            Upload a 60 second <br />
+                            profile video sharing <br />
+                            your story
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="text-center">
+                            <img src="./images/Landing/Vector3.png" alt="" />
+                        </div>
+                        <div class="stepBox">STEP 3</div>
+                        <div class="stepNameAttach">
+                            Attach a resume and <br />
+                            other info to your
+                            <br />
+                            profile
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="text-center">
+                            <img src="./images/Landing/Vector%204.png" alt="" />
+                        </div>
+                        <div class="stepBox">STEP 4</div>
+                        <div class="stepNameHiring">
+                            A hiring manager sees <br />
+                            your profile and video
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="text-center">
+                            <img src="./images/Landing/Vector5.png" alt="" />
+                        </div>
+                        <div class="stepBox5" style="background-color: #fc821f; color: #ffffff">STEP 5</div>
+                        <div class="stepNameInterview">
+                            Let’s say someone <br />
+                            wants to interview you, <br />
+                            we will send you <br />
+                            the details!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- for md -->
+            <div class="howItWorks xl:hidden lg:hidden md:block sm:hidden sx:hidden">
+                <div class="stepsContainer">
+                    <div class="stepCreate">
+                        <div class="imageContainer">
+                            <img src="./images/Landing/Vector1.png" alt="" />
+                        </div>
+                        <div class="stepBox">STEP 1</div>
+                        <div class="stepNameCreateAcc">
+                            Create an
+                            <br />
+                            account
+                        </div>
+                    </div>
+                    <div class="step2">
+                        <div class="imageContainer2">
+                            <img src="./images/Landing/Vector2.png" alt="" />
+                        </div>
+                        <div class="stepBox">STEP 2</div>
+                        <div class="stepNameUpload">
+                            Upload a 60
+                            <br />
+                            second profile
+                            <br />
+                            video sharing
+                            <br />
+                            your story
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="imageContainer">
+                            <img src="./images/Landing/Vector3.png" alt="" />
+                        </div>
+                        <div class="stepBox">STEP 3</div>
+                        <div class="stepNameAttach">
+                            Attach a
+                            <br />
+                            resume and
+                            <br />
+                            other info to
+                            <br />
+                            your profile
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="imageContainer">
+                            <img src="./images/Landing/Vector%204.png" alt="" />
+                        </div>
+                        <div class="stepBox">STEP 4</div>
+                        <div class="stepNameHiring">
+                            A hiring <br /> manager <br />
+                            sees your
+                            <br /> profile and
+                            <br /> video
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="imageContainer">
+                            <img src="./images/Landing/Vector5.png" alt="" />
+                        </div>
+                        <div class="stepBox5" style="background-color: #FC821F; color: #FFFFFF;">
+                            STEP 5
+                        </div>
+                        <div class="stepNameInterview">
+                            Let’s say someone <br /> wants to interview <br />
+                            you, we email you
+                            <br /> with details!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- for sm only -->
+            <div class="howItWorks xl:hidden lg:hidden md:hidden sm:block xs:block">
+                <div class="stepsContainer">
+                    <div class="step">
+                        <div class="stepBox" style="white-space: nowrap;">
+                            STEP 1
+                        </div>
+                        <div class="imageContainerSm" style="margin-top: 10px">
+                            <img src="./images/Landing/Vector1.png" alt="" />
+                        </div>
+                        <div class="stepNameSm" style="font-size: 15px">
+                            Create an account
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="stepBox" style="white-space: nowrap;">
+                            STEP 2
+                        </div>
+                        <div class="imageContainerSm2" style="margin-top: 22px">
+                            <img src="./images/Landing/Vector2.png" alt="" />
+                        </div>
+                        <div class="stepNameSm" style="margin-bottom: 10px; font-size: 15px">
+                            Upload a 60 second <br />
+                            profile video sharing <br />
+                            your story
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="stepBox" style="white-space: nowrap;">
+                            STEP 3
+                        </div>
+                        <div class="imageContainerSm" style="margin-top: 10px">
+                            <img src="./images/Landing/Vector3.png" alt="" />
+                        </div>
+                        <div class="stepNameSm" style=" margin-top: 10px; margin-bottom: 10px; font-size: 15px;">
+                            Attach a resume and <br />
+                            other info to your
+                            <br />
+                            profile
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="stepBox" style="white-space: nowrap">
+                            STEP 4
+                        </div>
+                        <div class="imageContainerSm" style="margin-top: 8px">
+                            <img src="./images/Landing/Vector%204.png" alt="" />
+                        </div>
+                        <div class="stepNameSm" style="margin-top: 10px; margin-bottom: 10px; font-size: 15px;">
+                            A hiring manager <br />
+                            sees your profile and video
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="stepBox" style="background-color: #FC821F; color: #FFFFFF; white-space: nowrap;">
+                            STEP 5
+                        </div>
+                        <div class="imageContainerSm" style="margin-bottom: 10px">
+                            <img src="./images/Landing/Vector5.png" alt="" />
+                        </div>
+                        <div class="stepNameSm" style="margin-top: 10px; font-size: 15px">
+                            Let’s say someone <br />
+                            wants to interview <br />
+                            you, we email you with details!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+
+
+    <!-- Showcase Your Talent start -->
+    <h1 class="heading mt-20">Showcase Your Talent, Skills, and Story</h1>
+    <br>
+    <p class="secondaryParagraph">Click on the job seeker profiles below and see what makes them stand out</p>
+    <div class="text-center">
+        <small class="text-sm">(Example profiles are for illustrative purposes only)</small>
+    </div>
+
+    <div
+        class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 sm:gap-2 gap-4 xl:px-[7.5rem] lg:px-10 md:px-9 sm:px-5 sx:px-6">
+        <div class="text-center mb-[40px] mt-[100px]">
+            <div class="flex justify-center">
+                <img class="see-profile-img" onclick="openModal('seeProfileModal1')" src="./images/Landing/avatar1.png"
+                    alt="" />
+            </div>
+            <p class="stageName" style="margin-top: 18px">Alice Rosenbaum</p>
+            <p class="stageDeg">Cryptographer</p>
+            <button class="stageButton" onclick="openModal('seeProfileModal1')">SEE PROFILE</button>
+        </div>
+
+        <div class="text-center mb-[40px] mt-[100px]">
+            <div class="flex justify-center">
+                <img class="see-profile-img" onclick="openModal('seeProfileModal2')" src="./images/Landing/avatar2.png"
+                    alt="" />
+            </div>
+            <p class="stageName" style="margin-top: 18px">Silas Adams</p>
+            <p class="stageDeg">Architect</p>
+            <button class="stageButton" onclick="openModal('seeProfileModal2')">SEE PROFILE</button>
+        </div>
+
+        <div class="text-center mb-[40px] mt-[100px]">
+            <div class="flex justify-center">
+                <img class="see-profile-img" onclick="openModal('seeProfileModal3')" src="./images/Landing/avatar3.png"
+                    alt="" />
+            </div>
+            <p class="stageName" style="margin-top: 18px">Micah Roberts</p>
+            <p class="stageDeg">Wind Turbine Tech</p>
+            <button class="stageButton" onclick="openModal('seeProfileModal3')">SEE PROFILE</button>
+        </div>
+
+        <div class="text-center mb-[40px] mt-[100px]">
+            <div class="flex justify-center">
+                <img class="see-profile-img" onclick="openModal('seeProfileModal4')" src="./images/Landing/avatar4.png"
+                    alt="avatar4" />
+            </div>
+            <p class="stageName" style="margin-top: 18px">Jada Flores</p>
+            <p class="stageDeg">Makeup Artist</p>
+            <button class="stageButton" onclick="openModal('seeProfileModal4')">SEE PROFILE</button>
+        </div>
+    </div>
+
+    <section class=" xl:px-[7.5rem] lg:px-10 md:px-9 sm:px-5 sx:px-6 ">
+        <div class="blackContainer">
+            <h1 class="whiteHeading">
+                We never box you in. <br />
+                Neither do jobs listed here.
+            </h1>
+            <div class="homeContainer">
+                <div class="grid grid-cols-12">
+                    <div class="md:col-span-6 lg:col-span-6 sm:col-span-12 homeSection">
+                        <div class="flex justify-center">
+                            <img class="image" src="./images/Landing/image2.png" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="col-span-6 lg:col-span-6 sm:col-span-12 homeSection">
+                        <p class="whiteParagraph">
+                            <span class="whiteParagraphHead">Because the truth is, you’re way more than a resume.</span>
+                            <br />
+                            That’s why <span class="font-bold"> A Foot in the Door</span> helps you score life-changing
+                            interviews with employers who focus on your potential,
+                            not just your years of experience. Show hiring managers who you are and what you offer
+                            through short video reels. Just like all of your favorite
+                            apps on the internet. You see, we know that great companies don’t just want resumes. They
+                            keep an eye out for talent. Now show ‘em what you’ve got!
+                        </p>
+                        <div class="circleImageBottomPadding"></div>
+                    </div>
+                </div>
+                <div class="blackContainerCircle">
+                    <img src="./images/Banner/circle-bottom.png" alt="" class="blackContainerCircleImg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="xl:px-[7.5rem] lg:px-10 md:px-9 sm:px-5 sx:px-6  mb-24">
+        <div class="cardContainer">
+            <div class="card">
+                <div class="cardTop">
+                    <div class="cardName">
+                        <div class="cardImg">
+                            <img src="./images/Landing/avatar6.png" alt="" />
+                        </div>
+                        <div class="cardText">
+                            <p class="cardTextPrimary">Wade Chen</p>
+                            <p class="cardTextSecondary">Technical Writer</p>
+                        </div>
+                    </div>
+                    <div class="cardComma">
+                        <img src="./images/Landing/comma.png" alt="" />
+                    </div>
+                </div>
+                <p class="resumeCardParagraph">
+                    "I’ve been on every major job search platform, and when I found A Foot in the Door, it was like a
+                    breath of fresh air. No other platform makes it this easy
+                    to connect with employers. For once I feel like my profile is an accurate portrayal of me and my
+                    experience."
+                </p>
+            </div>
+            <div class="card">
+                <div class="cardTop">
+                    <div class="cardName">
+                        <div class="cardImg">
+                            <img src="./images/Landing/avatar5.png" alt="" />
+                        </div>
+                        <div class="cardText">
+                            <p class="cardTextPrimary">Charlotte Burke</p>
+                            <p class="cardTextSecondary">Marketing Consultant</p>
+                        </div>
+                    </div>
+                    <div class="cardComma">
+                        <img src="./images/Landing/comma.png" alt="" />
+                    </div>
+                </div>
+                <p class="resumeCardParagraph">
+                    "When I came across A Foot in the Door, I was immediately drawn in by their modern approach to what
+                    can be a cumbersome ordeal. Their process made it to
+                    where I was more than just a name on another resume. I actually enjoyed making my 60 second video
+                    and now I really feel like I have the opportunity to show
+                    potential employers who I am."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="xl:px-[7.5rem] lg:px-10 md:px-9 sm:px-5 sx:px-6 ">
+        <h1 class="heading">Create a free profile now</h1>
+        <p class="secondaryParagraph">
+            Help hiring managers really get to know you. Create a 60 second video sharing your story. <br />
+            Have no fear, it’s just practice until you make your profile public.
+        </p>
+        <div class="buttonContainer">
+            <div>
+                <button class="primaryButton" type="button" onclick="openModal('createAccountModal')">Get
+                    Started</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="xl:px-[7.5rem] lg:px-10 md:px-9 sm:px-5 sx:px-6 sm:mb-[40px]  md:mb-[84px]">
+        <div class="mobileDeviceContainer grid grid-cols-12">
+            <!-- <Grid {...defns.homeSection2}> -->
+            <div class="xl:col-span-6 lg:col-span-6 md:col-span-12 sm:col-span-12 order-1">
+                <div class="flex sm:justify-center lg:justify-start">
+                    <h2 class="secondaryHeading mt-20">Search, Find and Apply for jobs directly on your mobile device
+                    </h2>
+                </div>
+                <br>
+                <div class="flex sm:justify-center lg:justify-start">
+                    <p class="paragraph">
+                        Apply for jobs, manage your profile and even chat <br />
+                        with employers while on-the-go.
+                    </p>
+                </div>
+                <div class="flex sm:justify-center lg:justify-start mt-[66px] ">
+                    <a href="https://apps.apple.com/us/app/a-foot-in-the-door/id6443715039" target="_blank"
+                        rel="noopener noreferrer">
+                        <img class="store-img mr-[16px]" src="./images/FooterImg/app-store.svg" alt="app store">
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.afootinthedoor.work.mobile"
+                        target="_blank">
+                        <img class="store-img" src="./images/FooterImg/play-store.svg" alt="play store">
+                    </a>
+                </div>
+            </div>
+            <!-- <Grid {...defns.homeSection2}> -->
+
+            <div class="xl:col-span-6 lg:col-span-6 md:col-span-12 sm:col-span-12 order-2 lg:order-2 sm:order-first">
+                <div class="imageContainer flex sm:justify-center lg:justify-end ">
+                    <img class="mobileImg" src="./images/Landing/mobile.jpeg" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section start -->
+    <div class="footerBackground">
+        <div class="footerTopContainer grid grid-cols-12">
+            <div class="xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-6 xs:col-span-6">
+                <ul class="ulContent">
+                    <li class="liHeading">
+                        <p class="footerLink">For Job Seekers</p>
+                    </li>
+                    <span class="liContent">
+                        <li>
+                            <a href='javascript:;' class="footerLinkLi"
+                                onclick="openModal('createAccountModalJobSeeker')">
+                                Create an
+                                Account</a>
+                        </li>
+                        <li>
+                            <a href='javascript:;' class="footerLinkLi" onclick="openModal('loginModal')">Search
+                                Employers</a>
+                        </li>
+                        <li>
+                            <a href="https://afitd-test.web.app/job-center" class="footerLinkLi">Search Jobs</a>
+                        </li>
+                        <li>
+                            <a href="./resource-center.html" class="footerLinkLi">Resource Center</a>
+                        </li>
+                    </span>
+                </ul>
+            </div>
+            <div class="footerTopContent xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-6 xs:col-span-6">
+                <ul class="ulContent">
+                    <li class="liHeading">
+                        <p class="footerLink">For Employers</p>
+                    </li>
+                    <span class="liContent">
+                        <li>
+                            <a href="./employers.html" class="footerLinkLi">Employers Page</a>
+                        </li>
+                        <li>
+                            <a href='javascript:;' class="footerLinkLi"
+                                onclick="openModal('createAccountModalEmployers')">Create an Account </a>
+                        </li>
+                    </span>
+                </ul>
+            </div>
+
+            <div class="footerTopContent xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-6 xs:col-span-6">
+                <ul class="ulContent">
+                    <li class="liHeading">
+                        <p class="footerLink">A Foot in the Door</p>
+                    </li>
+                    <span class="liContent">
+                        <li>
+                            <a href="./about-us.html" class="footerLinkLi">About</a>
+                        </li>
+
+                        <li>
+                            <a href="https://afitd-test.web.app/home/FAQ/terms" class="footerLinkLi">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="https://afitd-test.web.app/home/FAQ/privacy" class="footerLinkLi">Privacy
+                                Policy</a>
+                        </li>
+                        <li>
+                            <a href="https://afitd-test.web.app/home/Contact-Us" class="footerLinkLi">Contact Us</a>
+                        </li>
+                    </span>
+                </ul>
+            </div>
+            <div
+                class="footerTopContent xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-6 xs:col-span-6 sm:!hidden md:!block">
+                <ul class="ulContent footer-logo-container  ">
+                    <li class="mb-[16px]">
+                        <a href="https://apps.apple.com/us/app/a-foot-in-the-door/id6443715039" target="_blank"
+                            rel="noopener noreferrer">
+                            <img class="footer-store-img" src="./images/FooterImg/app-store.svg" alt="app store">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.afootinthedoor.work.mobile"
+                            target="_blank">
+                            <img class="footer-store-img" src="./images/FooterImg/play-store.svg" alt="play store">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footerTopContent">
+            <ul class="ulContent  xs:block md:hidden footer-store-img-container-sm">
+                <li class="mr-[16px]">
+                    <a href="https://apps.apple.com/us/app/a-foot-in-the-door/id6443715039" target="_blank"
+                        rel="noopener noreferrer">
+                        <img class="footer-store-img" src="./images/FooterImg/app-store.svg" alt="app store">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.afootinthedoor.work.mobile"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="footer-store-img" src="./images/FooterImg/play-store.svg" alt="play store">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footerBottomContainer grid grid-cols-12">
+            <div
+                class="footerBottomGrid1 xl:col-span-10 lg:col-span-9 md:col-span-9 sm:col-span-12 xs:col-span-12 order-1">
+                <div class="footerBottomLogo">
+                    <img src="./images/Landing/footerLogo.svg" class="footerLog" />
+                </div>
+                <p class="footerBottomText">
+                    <script>
+                        const currentYear = new Date().getFullYear();
+                        document.write('&copy; Copyright 2022-' + currentYear + ' A Foot in the Door, Inc. All rights reserved.');
+                    </script>
+                </p>
+            </div>
+
+            <div
+                class="footerBottomGrid2 xl:col-span-2 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12 gap-1 order-2 md:order-2 sm:order-first">
+                <div>
+                    <a href="https://www.instagram.com/afootinthedoor_work/" target="_blank" rel="noopener noreferrer">
+                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="
+                                display: inline-block;
+                                fill: rgba(255, 255, 255, 0.5);
+                                width: 1em;
+                                height: 1em;
+                                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                flex-shrink: 0;
+                                color: rgba(255, 255, 255, 0.5);
+                                font-size: 35px;
+                                margin: 0px 8px;
+                                cursor: pointer;
+                            ">
+                            <path
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/afootinthedoorwork" target="_blank" rel="noopener noreferrer">
+                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="
+                                display: inline-block;
+                                fill: rgba(255, 255, 255, 0.5);
+                                width: 1em;
+                                height: 1em;
+                                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                flex-shrink: 0;
+                                color: rgba(255, 255, 255, 0.5);
+                                font-size: 35px;
+                                margin: 0px 8px;
+                                cursor: pointer;
+                            ">
+                            <path
+                                d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.linkedin.com/company/a-foot-in-the-door-inc/" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="
+                                display: inline-block;
+                                fill: rgba(255, 255, 255, 0.5);
+                                width: 1em;
+                                height: 1em;
+                                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                flex-shrink: 0;
+                                color: rgba(255, 255, 255, 0.5);
+                                font-size: 35px;
+                                margin: 0px 8px;
+                                cursor: pointer;
+                            ">
+                            <path
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCT6Z3_e5AgfVvcI0_8tlIdQ" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="
+                                display: inline-block;
+                                fill: rgba(255, 255, 255, 0.5);
+                                width: 1em;
+                                height: 1em;
+                                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                flex-shrink: 0;
+                                color: rgba(255, 255, 255, 0.5);
+                                font-size: 35px;
+                                margin: 0px 8px;
+                                cursor: pointer;
+                            ">
+                            <path
+                                d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- footer section end -->
+        <!-- js code for navbar -->
+        <script src="./JS/index.js">
+        </script>
+        <script src="./JS/home.js">
+        </script>
+        <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+    </div>
+</body>
+
+</html>

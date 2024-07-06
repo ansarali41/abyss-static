@@ -1,0 +1,593 @@
+body {
+    background-color: #fafafc;
+}
+.bannerContainer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/Banner/Home_Employers.jpg');
+    height: 710px;
+    background-position: center;
+    background-size: cover;
+}
+.bannerContent1 {
+    position: relative;
+    padding-left: 90px;
+    padding-top: 120px;
+}
+.bannerHeading {
+    font-size: 54px;
+    color: white;
+}
+
+.bannerParagraph {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.buttonContainer {
+    padding-top: 60px;
+}
+.bannerButton {
+    padding: 12px 44px;
+    font-size: 20px;
+}
+.bannerButton:hover {
+    background-color: #fc821f;
+}
+.bannerImageBottomContainer {
+    position: absolute;
+    bottom: 0px;
+    right: 44px;
+}
+.circleImageDiv {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.circleImage {
+    padding-top: 295px;
+}
+.employerContainer {
+    margin-bottom: 100px;
+}
+.employerSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.secondaryHeading2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    max-width: 450px;
+}
+.paragraphContainer {
+    max-width: 450px;
+}
+.paragraph {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+}
+.circleImageContainer {
+    display: flex;
+    margin-top: 70px;
+}
+.circleImgContainer {
+    text-align: center;
+    margin-right: 16px;
+}
+.img {
+    width: 100%;
+}
+.employerSection2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.secondaryHeading {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    max-width: 450px;
+}
+.primaryHeading {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    text-align: center;
+    max-width: 920px;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 80px;
+}
+
+.secondaryParagraph {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 52px;
+    max-width: 450px;
+}
+.textCenter {
+    text-align: center;
+    margin-bottom: 100px !important;
+    font-size: 16px;
+    font-size: 20px;
+}
+.employerSection3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.pricingOptionsHeader2 {
+    text-align: center;
+    margin-bottom: 100px !important;
+    font-size: 26px;
+}
+.pricingContainer {
+    margin-bottom: 100px;
+}
+
+.pricingCard {
+    height: 700px;
+    border: 2px solid #fafafa;
+    box-shadow: 0px 14.96px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.pricingCard:hover {
+    border: 2px solid #fc821f;
+}
+.cardStatus {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+.cardParagraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.cardPopular {
+    font-size: 11px;
+    line-height: 16px;
+    color: #fc821f;
+    padding: 4px 8px;
+    background-color: rgba(252, 130, 31, 0.2);
+    border-radius: 34px;
+}
+.cardMoneyMonth {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+}
+.cardMoneyYear {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+}
+.cardSave {
+    font-size: 11px;
+    line-height: 16px;
+    color: #1d8a8b;
+    padding: 4px 8px;
+    background-color: rgba(29, 138, 139, 0.2);
+    border-radius: 34px;
+    margin-left: 8px;
+}
+
+.cardTrialButton {
+    padding: 12px 76px;
+    font-size: 16px;
+    line-height: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color: #f0f2f6;
+    margin: 25px 0;
+}
+.cardTrialButton:hover {
+    background-color: #fc821f;
+    color: #ffffff;
+    cursor: pointer;
+}
+.cardList {
+    margin-left: 22px;
+}
+
+.ulList {
+    list-style-image: url('../images/Employers/Vector112.png');
+    margin-bottom: 6px;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.engageText {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.cardStar {
+    color: #fc821f;
+}
+
+.cardLastText {
+    font-size: 13px;
+    margin-left: 53px;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    margin: auto;
+}
+.card {
+    width: 43%;
+    height: 310px;
+    background-color: #fdf1cb;
+    border-radius: 8px;
+    padding: 30px;
+}
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+}
+.cardName {
+    display: flex;
+    justify-content: space-around;
+}
+.cardTextPrimary {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+}
+
+.cardTextSecondary {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+}
+
+.cardParagraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+.sellingContainer {
+    margin: 90px 0;
+}
+
+.sellingSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sellingBox {
+    width: 210px;
+    background-color: #f0f2f6;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    padding: 17px;
+}
+.sellingBoxText {
+    margin: 0;
+    font-size: 20px;
+}
+.sellingBoxSecondary {
+    width: 210px;
+    background-color: white;
+    border: 1px solid #d5d7dd;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    padding: 17px;
+}
+.mainContainer {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.leadInTextContainer {
+    display: flex;
+    justify-content: center;
+}
+.leadInTextContent {
+    padding: 50px 0px 30px 0px;
+    text-align: center;
+}
+
+.leadInTextHeading {
+    font-size: 41px;
+    font-weight: bold;
+}
+.leadInTextPara {
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 18px;
+}
+.employerContainer {
+    margin-bottom: 100px;
+}
+.imageContainer {
+    text-align: center;
+}
+.section2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.dropDown {
+    background-color: #d6f3f3;
+    border-radius: 8px;
+    width: 302px;
+    margin-bottom: 7px;
+    padding: 24px;
+}
+.dropUp {
+    border-radius: 8px;
+    width: 302px;
+    padding: 10px 24px;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fafafa;
+    margin-bottom: 7px;
+}
+
+.lastContainer {
+    text-align: center;
+    margin: 100px 0;
+}
+.contactUsLink {
+    text-decoration: underline;
+}
+
+.dropUp:hover {
+    border: 1px solid #d5d7dd;
+}
+
+input[type='radio'] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+    border: 5px solid #1d8a8b;
+    border-radius: 50%;
+    accent-color: #1d8a8b;
+    background: #1d8a8b;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+input[type='radio']:hover {
+    outline: none !important;
+    accent-color: #1d8a8b;
+    background: #1d8a8b;
+}
+
+.dropParagraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.dropDownFeatureText {
+    margin: 25px 0px 15px 0px;
+}
+
+/* @media screen and (min-width: 1440px) {
+} */
+/* //TODO:XL UP */
+@media (min-width: 1440px) {
+    .dropDown {
+        margin: auto;
+        width: 100% !important;
+    }
+}
+
+/* //TODO: lg Only */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .cardTrialButton {
+        padding: 12px 41px;
+    }
+    .sellingBox {
+        width: 190px;
+    }
+    .sellingBoxSecondary {
+        width: 190px;
+    }
+    .mainContainer {
+        padding: 0 44px;
+    }
+}
+
+/* //TODO: lg UP */
+@media (min-width: 1024px) {
+    .secondaryHeading2 {
+        margin-top: -60px;
+    }
+    .employerSection3 {
+        padding-left: 75px;
+    }
+    .pricingCard {
+        padding: 35px;
+    }
+    .mainContainer {
+        padding: 0 120px;
+    }
+    .dropDown {
+        width: 255px;
+    }
+}
+
+/* //TODO: lg down */
+@media screen and (max-width: 1439px) {
+    .bannerContainer {
+        justify-content: center;
+    }
+    .bannerContent1 {
+        padding-left: 0;
+        padding-top: 100px;
+        padding-right: 145px;
+    }
+    .card {
+        height: 390px;
+    }
+}
+
+/* //TODO:Lg Only price section */
+@media (min-width: 1024px) and (max-width: 1128px) {
+    .pricingCard {
+        height: 852px;
+    }
+}
+/* //TODO:MD Only */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sellingBox {
+        width: 130px;
+    }
+    .sellingBoxSecondary {
+        width: 130px;
+    }
+}
+
+/* //TODO: md UP */
+@media (min-width: 768px) {
+    .employerSection2 {
+        padding-left: 75px;
+    }
+    .mainContainer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .dropDown {
+        width: 302px;
+    }
+}
+
+/* //TODO: md down */
+@media screen and (max-width: 1023px) {
+    .bannerContainer {
+        height: 520px;
+    }
+    .bannerContent1 {
+        padding-top: 55px;
+        padding-right: 0;
+    }
+    .bannerHeading {
+        font-size: 42px;
+    }
+    .cardContainer {
+        flex-direction: column;
+        width: auto;
+    }
+    .card {
+        width: auto;
+        margin-bottom: 16px;
+        height: 290px;
+    }
+    .pricingCard {
+        height: 700px;
+    }
+}
+/* //TODO: sm down */
+@media screen and (max-width: 767px) {
+    .bannerContainer {
+        height: 600px;
+        text-align: center;
+    }
+    .bannerContent1 {
+        padding-top: 20px;
+    }
+    .bannerHeading {
+        font-size: 24px;
+        padding-top: 30px;
+    }
+    .bannerParagraph {
+        font-size: 18px;
+        padding: 9px 6px;
+    }
+    .buttonContainer {
+        padding-top: 50px;
+    }
+    .bannerButton {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+    .secondaryHeading2 {
+        font-size: 26px;
+        line-height: 34px;
+        text-align: center;
+        margin: auto;
+    }
+    .paragraphContainer {
+        margin: auto;
+    }
+    .paragraph {
+        line-height: 26px;
+        text-align: center;
+        margin: auto;
+    }
+    .circleImageContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .circleImg {
+        width: 60px;
+    }
+    .secondaryHeading {
+        font-size: 26px;
+        line-height: 34px;
+        text-align: center;
+        margin: auto;
+    }
+    .primaryHeading {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .secondaryParagraph {
+        text-align: center;
+        margin: auto;
+    }
+    .card {
+        height: 410px;
+    }
+    .sellingBox {
+        width: 320px;
+        text-align: center;
+    }
+    .sellingBoxSecondary {
+        width: 320px;
+        text-align: center;
+    }
+    .mainContainer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .leadInTextHeading {
+        font-size: 26px;
+        line-height: 34px;
+        text-align: center;
+    }
+    .section2 {
+        padding-left: 0;
+        margin: auto;
+    }
+    .dropDown {
+        width: auto;
+    }
+    .dropUp {
+        margin: auto;
+        width: 100%;
+    }
+    .pricingCard {
+        height: auto;
+    }
+}
+/* //TODO: xs down */
+@media screen and (max-width: 359px) {
+}

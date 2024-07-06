@@ -1,0 +1,547 @@
+body {
+    background-color: #fafafc;
+}
+.homeBannerContainer {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/Banner/Home_V2.jpg'); */
+    height: 710px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+.right-arrow-button {
+    background: rgba(17, 30, 20, 1) !important;
+}
+.search-button-text {
+    font-size: 16px;
+}
+
+.bannerHeading {
+    font-size: 54px;
+    color: white;
+    padding-top: 65px;
+    font-weight: 700;
+}
+
+.bannerParagraph {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 60px;
+    padding-top: 35px;
+}
+.heading {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    text-align: center;
+    padding: 16px 0;
+}
+.secondaryParagraph {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    margin: auto;
+    text-align: center;
+}
+
+.stageName {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.stageDeg {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0;
+    color: #868686;
+}
+.stageButton {
+    margin: 16px 0;
+    padding: 8px 12px;
+    color: white;
+    background-color: #111e14;
+    font-size: 13px;
+    line-height: 24px;
+    border: none;
+    border-radius: 4px;
+}
+
+.stageButton:hover {
+    cursor: pointer;
+}
+
+.blackContainer {
+    position: relative;
+    background-color: #111e14;
+    border-radius: 30px;
+    padding: 60px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0px 30px 44px rgba(0, 0, 0, 0.2));
+}
+
+.whiteHeading {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 52px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 646px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.homeContainer {
+    margin-bottom: 30px;
+}
+.mobileDeviceContainer {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.image {
+    max-width: 370px;
+    width: 85%;
+}
+.see-profile-img {
+    width: 88%;
+    max-width: 220px;
+    cursor: pointer;
+}
+
+.whiteParagraph {
+    font-size: 20px;
+    line-height: 32px;
+    color: white;
+    max-height: 510px;
+    margin: 0;
+}
+.whiteParagraphHead {
+    font-size: 20px;
+    color: white;
+    max-height: 510px;
+    font-weight: bold;
+}
+
+.circleImageBottomPadding {
+    padding-bottom: 100px;
+}
+
+.blackContainerCircle {
+    position: absolute;
+    bottom: 0px;
+    right: 124px;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    margin: auto;
+}
+.card {
+    width: 43%;
+    height: 325px;
+    background-color: #fdf1cb;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+}
+.cardName {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardTextPrimary {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+    font-weight: bold;
+}
+
+.cardTextSecondary {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+    font-weight: bold;
+}
+
+.resumeCardParagraph {
+    font-size: 18px;
+    padding-top: 25px;
+}
+
+.heading {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    text-align: center;
+    padding: 16px 0;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    margin-bottom: 100px;
+}
+
+.primaryButton {
+    background: #fc821f !important;
+    border-radius: 4px !important;
+    padding: 12px 37px !important;
+    /* margin: auto; */
+    border: none !important;
+    color: white !important;
+    font-size: 20px !important;
+    line-height: 40px !important;
+}
+.primaryButton:hover {
+    cursor: pointer !important;
+}
+.paragraph {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+}
+.imageContainer {
+    text-align: center;
+}
+.secondaryHeading {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    max-width: 500px;
+}
+.mobileImg {
+    width: 100%;
+    max-width: 440px;
+}
+.mainContainer {
+    padding: 0 60px;
+}
+.howItWorks {
+    background-image: url('../images/Landing/line.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.stepsContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 27px;
+    margin-top: 80px;
+    margin-bottom: 150px;
+    max-width: 965px;
+    margin: auto;
+}
+.stepCreate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.stepBox {
+    font-weight: bold;
+    padding: 13px 24px;
+    border: 4px solid #f0f2f6;
+    border-radius: 100px;
+    margin: 32px 0;
+    /* z-index: 10; */
+    background-color: white;
+}
+.stepNameCreateAcc {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+.step2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 18px;
+}
+.imageContainer2 {
+    text-align: center;
+    transform: translate(0px, -9px);
+}
+.stepNameUpload {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: -54px;
+}
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.stepNameAttach {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: -58px;
+}
+.stepNameHiring {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: -30px;
+}
+.stepBox5 {
+    font-weight: bold;
+    padding: 13px 24px;
+    border: 4px solid #f0f2f6;
+    border-radius: 100px;
+    margin: 32px 0;
+    margin-top: 35px;
+    background-color: white;
+}
+.stepNameInterview {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: -77px;
+}
+.imageContainerSm {
+    text-align: center;
+    margin: 0px 10px;
+}
+.imageContainerSm2 {
+    text-align: center;
+    transform: translate(0px, -9px);
+    margin: 0px 10px;
+}
+.stepNameSm {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: start;
+    width: 202px;
+    max-width: 150px;
+}
+
+.bannerImageContainer {
+    position: absolute;
+    bottom: 0px;
+    right: 44px;
+}
+
+.store-img {
+    max-width: 240px;
+    height: 70px;
+}
+
+.video-js .vjs-big-play-button {
+    display: none !important;
+}
+
+/* @media screen and (min-width: 1440px) {
+} */
+/* //TODO:XL UP */
+@media (min-width: 1440px) {
+    .mainContainer {
+        padding: 0 120px;
+    }
+}
+
+/* //TODO: lg Only */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .mainContainer {
+        padding: 0 13px;
+    }
+}
+
+/* //TODO: lg down */
+@media screen and (max-width: 1439px) {
+    .blackContainerCircle {
+        right: 83px;
+    }
+    .card {
+        height: 380px !important;
+    }
+}
+
+/* //TODO: md ONLY */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .howItWorks {
+        background-size: contain;
+    }
+    .stepBox {
+        margin: 10px 0;
+    }
+}
+
+/* //TODO: md down */
+@media screen and (max-width: 1023px) {
+    .bannerHeading {
+        font-size: 38px;
+        padding-top: 60px;
+    }
+    .whiteHeading {
+        font-size: 36px;
+        line-height: 34px;
+    }
+    .whiteParagraph {
+        font-size: 18px;
+    }
+    .whiteParagraphHead {
+        font-weight: normal;
+        font-size: 18px;
+    }
+    .circleImageBottomPadding {
+        padding-bottom: 60px;
+    }
+    .blackContainerCircle {
+        right: 47px;
+    }
+    .blackContainerCircleImg {
+        width: 160px;
+        height: 80px;
+    }
+    .cardContainer {
+        flex-direction: column;
+        width: auto;
+    }
+    .card {
+        width: auto !important;
+        margin-bottom: 16px;
+        height: 290px !important;
+    }
+    .stepCreate {
+        margin-top: 31px;
+    }
+    .stepNameUpload {
+        margin-bottom: -88px;
+    }
+    .stepNameAttach {
+        margin-bottom: -88px;
+    }
+    .stepNameHiring {
+        margin-bottom: -108px;
+    }
+    .mainContainer {
+        padding: 0 32px;
+    }
+    .circleImage {
+        width: 200px;
+    }
+    .secondaryHeading {
+        text-align: center;
+        margin: auto;
+        max-width: none;
+    }
+    .see-profile-img {
+        width: 85%;
+    }
+}
+/* //TODO: sm down */
+@media screen and (max-width: 767px) {
+    .bannerHeading {
+        font-size: 32px;
+        padding-top: 24px;
+        text-align: center;
+    }
+    .heading {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .blackContainer {
+        padding: '16px';
+    }
+
+    .whiteHeading {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .whiteParagraph {
+        font-size: 18px;
+        text-align: center;
+    }
+    .whiteParagraphHead {
+        text-align: center;
+        font-size: 18px;
+    }
+    .circleImageBottomPadding {
+        padding-bottom: 55px;
+    }
+    .blackContainerCircle {
+        right: 34px;
+    }
+    .card {
+        height: 460px !important;
+    }
+    .heading {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .paragraph {
+        font-size: 14px;
+        text-align: center;
+    }
+    .secondaryHeading {
+        font-size: 26px;
+        line-height: 34px;
+        text-align: center;
+        margin: auto;
+        max-width: none;
+    }
+    .mainContainer {
+        padding: 0 10px;
+    }
+    .howItWorks {
+        background-image: url('../images/Landing/line1.png');
+        background-position-x: 57px;
+        padding: 0 20px;
+    }
+    .stepsContainer {
+        flex-direction: column;
+        width: auto;
+        margin-top: 0;
+        padding-top: 80px;
+    }
+    .stepCreate {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .stepBox {
+        margin: 10px 0;
+    }
+    .step {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .stepBox5 {
+        margin: 10px 0;
+    }
+    .store-img {
+        max-width: 156px;
+        height: 40px;
+    }
+}
+/* //TODO: xs down */
+@media screen and (max-width: 359px) {
+    .card {
+        height: auto !important;
+    }
+}

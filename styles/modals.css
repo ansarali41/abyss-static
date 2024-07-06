@@ -1,0 +1,376 @@
+/* employer page Engage modal  start */
+/* Hide the modal by default */
+.engage-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+/* Modal content */
+.engage-modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border-radius: 5px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 768px;
+}
+.engage-modal-text-container {
+    padding: 8px 24px;
+}
+
+/* Close button for all modal same style*/
+.modal-close {
+    padding: 10px 16px;
+    font-size: 0.875rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Close button on hover */
+
+.engage-modal-title {
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 32px;
+    font-size: 20px;
+    padding: 16px 0px;
+}
+.engage-modal-description {
+    color: #111e14;
+    font-size: 1rem;
+    font-weight: 400;
+}
+/* employer page Engage modal end */
+
+/* login modal  start */
+/* Hide the modal by default */
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+/* Modal content */
+.login-modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border-radius: 5px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 486px;
+    max-height: calc(100% - 64px);
+    overflow-y: hidden;
+}
+.login-modal-form-container {
+    padding: 8px 34px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.login-modal-container {
+    padding: 16px 24px;
+    text-align: center;
+}
+.login-modal-title {
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 42px;
+    font-size: 26px;
+    font-weight: 700;
+}
+.login-button-modal {
+    font-size: 16px;
+    font-weight: 500;
+}
+.login-modal-bottom-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.01071em;
+    padding-top: 10px;
+}
+.continue-with-modal-button {
+    border: 1px solid #000;
+    margin: 8px 0px;
+    background: #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/* login modal end */
+
+/* login modal  start */
+/* Hide the modal by default */
+.create-account-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+/* Modal content */
+.create-account-modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border-radius: 5px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 486px;
+    max-height: calc(100% - 64px);
+    overflow-y: hidden;
+}
+.create-account-modal-form-container {
+    padding: 8px 34px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.create-account-modal-container {
+    padding: 16px 24px;
+    text-align: center;
+}
+.create-account-modal-title {
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 42px;
+    font-size: 26px;
+    font-weight: 700;
+}
+.create-account-button-modal {
+    font-size: 16px;
+    font-weight: 500;
+}
+.create-account-modal-bottom-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.01071em;
+    padding-top: 10px;
+}
+.continue-with-modal-button {
+    border: 1px solid #000;
+    margin: 8px 0px;
+    background: #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+input[type='radio'] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+    border: 5px solid #1d8a8b;
+    border-radius: 50%;
+    accent-color: #1d8a8b;
+    background: #1d8a8b;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+/* login modal end */
+
+/* see profile */
+/* see profile modal  start */
+/* Hide the modal by default */
+.see-profile-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+/* Modal content */
+.see-profile-modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #888;
+    width: 872px;
+    background: white;
+    max-height: 95vh;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+}
+.see-profile-modal-info-container {
+    padding: 0px 40px;
+}
+
+.modal-profile-pic {
+    width: 92px;
+    height: 92px;
+}
+.modal-profile-name {
+    color: #111e14;
+    font-size: 20px;
+    font-weight: bold;
+}
+.modal-location {
+    color: rgba(17, 30, 20, 1);
+    font-size: 20px;
+}
+.modal-profile-icons {
+    color: #9b9e9c;
+    font-size: 16px;
+    margin-right: 8px;
+}
+.modal-profile-icons-text {
+    font-size: 0.875rem;
+    margin-right: 8px;
+    letter-spacing: 0.01071em;
+    font-weight: bold;
+}
+.social-media-box {
+    border: 1px solid #d5d7dd;
+    margin: 13px 0 0 0;
+    border-radius: 4px;
+}
+.about-me-container {
+    height: 400px;
+    overflow-y: scroll;
+}
+.arrow-back-style {
+    z-index: 100;
+    /* position: absolute;
+    top: 50%; */
+}
+.arrow-forward-style {
+    z-index: 100;
+    /* position: absolute;
+    top: 50%;
+    right: 0; */
+}
+.three-container-box {
+    width: 1035px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 50vh;
+}
+.profile-avatar-container {
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+    background: -webkit-linear-gradient(360deg, #f6b73c, #1d8a8b);
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.profile-avatar-box {
+    color: rgb(252, 130, 31);
+    background: #fff;
+    width: 92px;
+    height: 91px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+.profile-avatar {
+    border-radius: 50%;
+}
+.vjs-poster img {
+    object-fit: cover !important;
+}
+/* see profile modal end */
+
+/* @media screen and (min-width: 1440px) {
+} */
+/* //TODO:XL UP */
+@media (min-width: 1440px) {
+}
+
+/* //TODO: lg Only */
+@media (min-width: 1024px) and (max-width: 1439px) {
+}
+
+/* //TODO: lg UP */
+@media (min-width: 1024px) {
+}
+
+/* //TODO: lg down */
+@media screen and (max-width: 1439px) {
+    .see-profile-modal-content {
+        width: 825px;
+    }
+    .three-container-box {
+        width: 982px;
+    }
+}
+
+/* //TODO:MD Only */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* //TODO: md UP */
+@media (min-width: 768px) {
+}
+
+/* //TODO: md down */
+@media screen and (max-width: 1023px) {
+    .see-profile-modal-content {
+        width: 710px;
+    }
+    .see-profile-modal-info-container {
+        padding: 0px 10px;
+    }
+    .three-container-box {
+        max-width: 740px;
+    }
+    .modal-location {
+        font-size: 16px;
+    }
+}
+/* //TODO: sm down */
+@media screen and (max-width: 767px) {
+    .see-profile-modal-content {
+        width: 95%;
+    }
+    .about-me-container {
+        height: auto;
+        overflow-y: auto;
+    }
+    .about-me-with-button-section {
+        height: 400px;
+        overflow-y: scroll;
+    }
+    .three-container-box {
+        width: auto;
+    }
+}
+/* //TODO: xs down */
+@media screen and (max-width: 359px) {
+}

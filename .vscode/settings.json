@@ -1,0 +1,41 @@
+{
+    "editor.formatOnSave": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.settings.useSplitJSON": true,
+    "workbench.settings.editor": "json",
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "scm.defaultViewMode": "tree",
+
+    "prettier.printWidth": 180,
+    "prettier.singleQuote": true,
+    "prettier.arrowParens": "avoid",
+    "prettier.trailingComma": "all",
+    "prettier.tabWidth": 4,
+
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.npm": "C:\\Program Files\\nodejs",
+    "typescript.check.npmIsInstalled": false,
+
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.next": true,
+        "**/out": true
+    },
+    "files.exclude": {
+        "**/node_modules": true
+    },
+
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+
+    "editor.accessibilitySupport": "off",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "cSpell.words": ["Afitd", "Firestore", "Pinterest", "Roboto", "Skillset", "defns", "firebaseapp", "maxlength", "scrollable"]
+}

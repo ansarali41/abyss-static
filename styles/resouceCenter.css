@@ -1,0 +1,111 @@
+body {
+    background-color: #fafafc;
+}
+.pageContainer {
+    background-color: white;
+    overflow: hidden;
+    height: 100%;
+    min-height: 100%;
+    flex-wrap: unset;
+}
+.pageContent {
+    flex: 1;
+    overflow-y: auto;
+}
+.headingContainer {
+    text-align: center;
+    color: #000000;
+    margin-top: 70px;
+}
+
+.headingTitle {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.headingPara {
+    font-size: 20px;
+}
+.cardContainer {
+    margin-top: 60px;
+}
+.cardSection {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+}
+
+.card {
+    width: 291px;
+    border-radius: 8px;
+    border: 1px solid #d5d7dd;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.img {
+    width: 100%;
+}
+.cardContent {
+    margin-bottom: 27px;
+    margin-left: 24px;
+    margin-right: 20px;
+    border-bottom: 20px solid white;
+}
+.dateTime {
+    margin-bottom: 0;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+.cardHeading {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 34px;
+}
+.cardParagraph {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* media */
+/*  */
+/*  */
+/* //TODO:xl up */
+@media screen and (min-width: 1440px) {
+}
+
+/* //TODO: lg down */
+@media screen and (max-width: 1439px) {
+    .cardSection {
+        padding: 16px 0px;
+    }
+}
+
+/* //TODO: lg UP */
+@media screen and (min-width: 1024px) {
+}
+
+/* //TODO: md down */
+@media screen and (max-width: 1023px) {
+    .cardContainer {
+        max-width: 673px;
+        margin: auto;
+    }
+    .card {
+        width: 302px;
+    }
+}
+/* //TODO: sm down */
+@media screen and (max-width: 767px) {
+    .card {
+        width: 340px;
+    }
+}
+@media screen and (max-width: 359px) {
+}
